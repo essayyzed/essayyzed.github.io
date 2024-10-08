@@ -26,6 +26,8 @@ The architecture of a RAG system typically consists of:
 1. **Retriever**: This component searches a knowledge base for relevant documents or data based on a user query.
 2. **Generator**: After the retrieval step, the generative model synthesizes an answer using the retrieved information.
 
+![RAG Flow](/assets/img/rag_workflow.gif)
+
 ### Recommended Architectural Framework
 
 Adopting RAG requires a thoughtful architectural approach. The blueprint suggests a framework that seamlessly integrates the retrieval and generative components. This includes robust databases, efficient indexing mechanisms for quick data retrieval, and a generative model that can effectively utilize the retrieved data. Ensuring smooth interoperability between these components is key to harnessing the full potential of RAG.
@@ -48,18 +50,24 @@ Components required in a RAG architecture:
 
 A key component of the architecture is the Vector Database. It is used to store high-dimensional embeddings of text documents. Its primary role is to enable fast and efficient retrieval of information that is semantically similar to a given query. This retrieval is crucial for the RAG model to generate accurate and contextually relevant responses. The vector database ensures scalability, speed, and continuous updating of information, enhancing the overall performance of the RAG system.
 
+![RAG Solution Architecture](/assets/img/rag_solution.png)
 _RAG Solution Architecture_
 
 ## Benefits of RAG
 
-- **Enhanced Accuracy**: By grounding responses in verified data, RAG reduces hallucinations.
-- **Dynamic Knowledge Updates**: The knowledge base can be continuously updated, allowing the model to stay current with new information.
-- **Flexibility**: RAG can be adapted for various applications, from chatbots to complex data analysis tools.
+- **Cost-effective Training**: RAG requires less computational power and data compared to extensive fine-tuning or training LLM processes.
+
+- **Access to Various Knowledge Sources**: RAG combines internal knowledge with that from external databases, resulting in more accurate answers.
+
+- **Enhanced Scalability**: RAG can handle large datasets and intricate queries, surpassing conventional LLMs limited by their context window size.
 
 ## Limitations of RAG
 
-- **Complexity**: Implementing RAG systems can be technically challenging, requiring robust architecture and maintenance.
-- **Dependency on Data Quality**: The effectiveness of RAG is heavily reliant on the quality of the retrieved data.
+- **Risk of Hallucinations**: RAG can still make errors if the database lacks certain information.
+
+- **Managing Scalability**: Increasing the database size can complicate quick and efficient data retrieval.
+
+- **Potential Biases**: Biases in the retrieval database can influence the responses, necessitating tools to identify and mitigate these biases.
 
 ## The Grand Dilemma: RAG vs Fine-Tune
 
