@@ -24,6 +24,8 @@ Back then, it didn’t make sense. But now, after some real-world experience, I 
 
 The truth is — **communication is just as important as technical expertise**. In the real world, you’re never working in isolation. You’re constantly part of a team, and more often than not, you’ll be collaborating with people from other departments too. That’s where communication becomes essential. And it’s not just about speaking clearly — it’s about writing effective emails, explaining your ideas, and yes, presenting your work in a way that makes people _actually care_.
 
+![Giving a talk on communication and confidence](/assets/img/1672300272759.jpeg){: .center-image }
+
 ---
 
 ### Don’t Underestimate Presentation Skills
@@ -40,7 +42,9 @@ A good presentation doesn’t just inform. It tells a story. It makes your work 
 
 I was lucky to have mentors who helped shape these skills in me. (Fun fact: I was a _huge_ introvert when I first started university.)
 
-One person I absolutely have to mention is **Ma’am Abida**. I took two courses with her, and believe me — those classes were game-changers. By the time I was done, my confidence and communication had leveled up in a big way.
+One person I absolutely have to mention is [**Ma’am Abida**](https://www.linkedin.com/in/abida-aabi-confidence-building-coach-nlp-therapist-977315201). I took two courses with her, and believe me — those classes were game-changers. By the time I was done, my confidence and communication had leveled up in a big way.
+
+Another mentor who played a key role in my development was [**Dr. Muhammad Nauman**](https://recluze.net) — also known as [**Mohmmad Nauman on LinkedIn**](https://www.linkedin.com/in/recluze). His approach to teaching and mentorship pushed me to think deeply, communicate clearly, and challenge my own limits.
 
 Then there was **COLAB**, a research lab I was part of (a story for another day). That place gave me the space and support to keep practicing my presentation skills, surrounded by some truly incredible people.
 
