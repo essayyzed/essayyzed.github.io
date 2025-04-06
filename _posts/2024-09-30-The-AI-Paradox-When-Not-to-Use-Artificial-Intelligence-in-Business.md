@@ -1,70 +1,74 @@
-# The AI Paradox: When Not to Use Artificial Intelligence in Business
+---
+layout: post
+title: "The Skill That Changed Everything"
+date: 2025-04-06
+categories: [career, soft-skills, communication]
+tags: [communication, presentation, industry, career-advice, personal-growth]
+---
 
-In today's rapidly evolving business landscape, Artificial Intelligence (AI) has emerged as a game-changing technology. However, with the recent surge in generative AI applications, there's a common misconception that these tools are the answer to every business challenge. **It's like they've all been given a shiny new hammer, and suddenly every business challenge looks like a nail.** Many organizations appear unprepared for the challenges posed by generative AI, with a significant portion reporting a lack of governance policies and active efforts to mitigate inaccuracies, reflecting a general trend of hesitancy in fully embracing AI technologies. **This blog post aims to broaden your perspective and explore strategies for identifying the most appropriate AI solution for your specific business problems.**
+After spending over two years working in the industry, someone once asked me:
 
-## Understanding the Problem: The First Step to Success
+> “What’s the most valuable skill you’ve gained?”
 
-Before diving into AI solutions, it's crucial to have a clear and comprehensive understanding of the business problem at hand. This involves:
+Without a second thought, my answer was: **communication skills** — which, by the way, includes **presentation skills** too.
 
-- **Clearly defining the problem:** What specific challenge or opportunity are you addressing? Be as precise as possible.
-- **Identifying key stakeholders:** Who will be affected by or benefit from the solution? This could include customers, employees, management, or other parties.
-- **Establishing goals and success criteria:** What does a successful outcome look like? How will you measure progress and results?
-- **Considering constraints:** What limitations exist in terms of budget, time, data availability, or technical expertise?
+---
 
-**By thoroughly analyzing these aspects, you'll be better equipped to choose an AI solution that truly addresses your needs.**
+### The Turning Point
 
-## Assessing Available Data: The Fuel for AI
+I still remember being confused during my university days, wondering why we were being asked to work so much on our presentation skills.
 
-AI systems are only as good as the data they're trained on. Before selecting an AI approach, it's essential to evaluate your data landscape:
+> *“We’re not going into teaching or academia, so what’s the point?”*
 
-- **Types of data:** What kinds of data do you have access to? This could include structured data (e.g., databases), unstructured data (e.g., text documents, images), or real-time data streams.
-- **Data quality:** Is your data accurate, complete, and relevant to the problem at hand? **Poor quality data can lead to unreliable AI outcomes.**
-- **Data volume:** Do you have sufficient data to train an AI model effectively? Some AI techniques require large amounts of data, while others can work with smaller datasets.
-- **Data privacy and security:** Are there any legal or ethical considerations regarding the use of your data? Ensure compliance with relevant regulations like GDPR or CCPA.
-- **Data collection and preparation:** What processes are needed to gather, clean, and preprocess the data for use in AI systems?
+Back then, it didn’t make sense. But now, after some real-world experience, I see things differently.
 
-**Understanding your data situation will help narrow down the AI techniques that are feasible and appropriate for your problem.**
+The truth is — **communication is just as important as technical expertise**. In the real world, you’re never working in isolation. You’re constantly part of a team, and more often than not, you’ll be collaborating with people from other departments too. That’s where communication becomes essential. And it’s not just about speaking clearly — it’s about writing effective emails, explaining your ideas, and yes, presenting your work in a way that makes people _actually care_.
 
-## Exploring AI Techniques: Beyond Generative AI
+![Giving a talk on communication and confidence](/assets/img/1672300272759.jpeg){: .center-image }
 
-While generative AI has captured much attention recently, it's just one tool in the vast AI toolkit. Let's explore some other AI techniques that might be more suitable for your business problem:
+---
 
-- **Machine Learning (ML):**
+### Don’t Underestimate Presentation Skills
 
-  - **Supervised Learning:** Ideal for prediction tasks with labeled data.
-  - **Unsupervised Learning:** Useful for discovering patterns and structures in data without predefined labels.
-  - **Reinforcement Learning:** Suitable for decision-making problems in dynamic environments.
+**Presentation skills** in particular are often underestimated.
 
-- **Deep Learning:**
+But here’s the thing: you could build something amazing, something that took weeks or months of effort. But if you can’t present it well — if your audience doesn’t understand its value — then all that hard work risks being overlooked or dismissed.
 
-  - **Neural Networks:** Powerful for complex pattern recognition in large datasets.
-  - **Convolutional Neural Networks (CNNs):** Excellent for image and video analysis.
-  - **Recurrent Neural Networks (RNNs):** Well-suited for sequential data like time series or natural language.
+A good presentation doesn’t just inform. It tells a story. It makes your work memorable.
 
-- **Expert Systems:** Rule-based systems that encode human expertise for decision-making. **Useful when clear rules and logic can be defined for a problem.**
+---
 
-- **Natural Language Processing (NLP):** Techniques for understanding, interpreting, and generating human language. Applications include sentiment analysis, language translation, and text summarization.
+### The People Who Helped Me Grow
 
-- **Computer Vision:** AI systems that can interpret and analyze visual information from the world. Used in facial recognition, object detection, and autonomous vehicles.
+I was lucky to have mentors who helped shape these skills in me. (Fun fact: I was a _huge_ introvert when I first started university.)
 
-- **Robotics and Autonomous Systems:** AI-powered systems that can interact with the physical world. Applications in manufacturing, logistics, and exploration.
+One person I absolutely have to mention is [**Ma’am Abida**](https://www.linkedin.com/in/abida-aabi-confidence-building-coach-nlp-therapist-977315201). I took two courses with her, and believe me — those classes were game-changers. By the time I was done, my confidence and communication had leveled up in a big way.
 
-- **Generative AI:** Systems that can create new content, such as text, images, or music. **Useful for creative tasks, content generation, and data augmentation.**
+Another mentor who played a key role in my development was [**Dr. Muhammad Nauman**](https://recluze.net) — also known as [**Mohmmad Nauman on LinkedIn**](https://www.linkedin.com/in/recluze). His approach to teaching and mentorship pushed me to think deeply, communicate clearly, and challenge my own limits.
 
-**Remember, the best solution often involves combining multiple AI techniques or integrating AI with traditional software approaches. The key is to match the technique to your specific problem and data characteristics.**
+Then there was **COLAB**, a research lab I was part of (a story for another day). That place gave me the space and support to keep practicing my presentation skills, surrounded by some truly incredible people.
 
-## Conclusion: The Right Tool for the Right Job
+---
 
-As we've explored throughout this post, **the key to successfully leveraging AI in business lies not in blindly applying the latest technology, but in thoughtfully matching the right solution to each unique problem.** Let's recap the essential strategies:
+### Your Next Step
 
-- **Understand the problem deeply:** Clear problem definition is the foundation of any successful solution.
-- **Assess your data landscape:** Know what data you have, its quality, and any limitations.
-- **Explore diverse AI techniques:** Look beyond generative AI to the full spectrum of AI solutions.
-- **Consider implementation factors:** Account for technical feasibility, resources, and ethical implications.
-- **Evaluate and iterate:** Set clear success metrics and be prepared to refine your approach.
+So, if you’re currently in undergrad — or about to graduate — here’s a little advice:
 
-**Remember the story of the AI hammer we started with.** Just as a skilled carpenter knows when to use a hammer and when to reach for a different tool, a savvy business leader must discern when AI is the right solution and when alternative approaches might be more effective. As you face your next business challenge, resist the urge to immediately reach for the AI hammer. Instead, take a step back, analyze the problem holistically, and consider the full range of solutions available.
+**Invest in your communication and presentation skills.**  
+They’ll serve you not just in your career, but in your personal life too. Trust me, it’s a game-changer.
 
-**By doing so, you'll be better equipped to choose a solution that truly addresses your needs, whether that's a cutting-edge AI system, a traditional software approach, or even a non-technological solution.**
+---
 
-In the end, the most successful businesses will be those that view AI not as a magical cure-all, but as one powerful tool in a diverse toolkit of problem-solving strategies. By adopting this mindset, you'll be well-positioned to harness the true potential of AI while avoiding the pitfalls of misapplication. **So, the next time someone suggests, "We should use AI for that!" you'll be ready to ask the crucial follow-up questions that lead to truly effective solutions.** After all, in the world of business problem-solving, **it's not about having the fanciest hammer—it's about building the best solution, one carefully chosen tool at a time.**
+#### Here’s a Challenge
+
+Prepare a 2-minute talk about something you’re passionate about — anything — and share it with a friend, classmate, or mentor this week.
+
+Watch how the feedback you get sparks new ideas, builds your confidence, and makes you see your ideas more clearly.
+
+Because when you master communication, you don’t just share your work — **you bring it to life**.
+
+And that, more than anything else, will change everything.
+
+---
+
+*Thanks for reading. Let me know what skills you've found most valuable since entering the industry — I'd love to hear your thoughts.*
