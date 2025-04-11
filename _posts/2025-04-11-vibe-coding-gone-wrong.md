@@ -5,7 +5,7 @@ date: 2025-04-11
 categories: coding ai development
 ---
 
-# When "Vibe Coding" Goes Wrong: Lessons from a Viral Twitter Meltdown
+# When "Vibe Coding" Goes Wrong"
 
 There was a viral post on Twitter recently where someone proudly showcased a SaaS product they had built using an AI-powered coding tool called Cursor. It looked like a success story in the making—fast execution, working product, lots of engagement.
 
