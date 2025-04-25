@@ -22,7 +22,7 @@ And in a very real sense, writing code is about **communicating** with a machine
 
 ---
 
-![Programming 2025](assets/img/programming_2025.jpg)
+![Programming 2025](../assets/img/programming_2025.jpg)
 
 ---
 
