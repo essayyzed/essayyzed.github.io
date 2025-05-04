@@ -5,9 +5,6 @@ date: 2025-05-04
 categories: [Personal Growth, COLAB, Education]
 tags: [COLAB, Learning, Career, Growth]
 ---
-
-## How COLAB Transformed My Journey
-
 We’ve all had those moments — a spark, an unexpected encounter, or a place that quietly changes the trajectory of your life. For me, that place was COLAB.
 
 In a previous blog post, I briefly mentioned COLAB while talking about communication skills. But honestly, a footnote doesn’t do it justice. This initiative wasn’t just a side project during my undergrad years — it was a turning point. It shaped how I think, how I work, and even how I show up in professional spaces like IBM today.
