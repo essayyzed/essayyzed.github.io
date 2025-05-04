@@ -9,7 +9,7 @@ We’ve all had those moments — a spark, an unexpected encounter, or a place t
 
 In a previous blog post, I briefly mentioned COLAB while talking about communication skills. But honestly, a footnote doesn’t do it justice. This initiative wasn’t just a side project during my undergrad years — it was a turning point. It shaped how I think, how I work, and even how I show up in professional spaces like IBM today.
 
-## Growth in Action: From Confidence to Code
+## Growth in Action
 
 COLAB is a research and learning space at FAST NUCES Peshawar. It was launched in 2017 by Dr. Mohammad Nauman — a name that comes up often in my story for good reason. His vision was clear and refreshingly simple: build a space where students from different academic years could come together, share ideas, and grow — not through rigid structures, but through curiosity and collaboration.
 
@@ -32,7 +32,7 @@ We even hosted workshops on DevOps and web development. And these weren’t seni
 ![Student Presenting](../assets/img/colab-presentation.jpeg)  
 *A student presenting in a COLAB session.*
 
-## The Ripple Effect: From Campus to Careers
+## The Ripple Effect
 
 The results spoke for themselves. Many of us started freelancing or working part-time while still in university. Some internships turned into long-term jobs. Others who weren’t part of COLAB saw what we were doing, got inspired, and started learning and applying the same skills on their own — even though they never actually joined the space.
 
@@ -45,7 +45,7 @@ Fast forward to my time at IBM, and I started seeing echoes of COLAB in the prof
 COLAB wasn’t a one-off experiment. It was a living model of how freedom, collaboration, and purpose can lead to powerful outcomes. And I truly believe that if more institutions and companies adopted this mindset, they’d unlock the same magic.
 
 
-## Final Thoughts: A Lesson Worth Sharing
+## A Lesson Worth Sharing
 
 If there’s one thing COLAB taught me, it’s this: when the right people come together with the right intent, incredible things can happen. It didn’t require fancy labs or big budgets. It just needed trust, time, and the willingness to learn — together.
 
