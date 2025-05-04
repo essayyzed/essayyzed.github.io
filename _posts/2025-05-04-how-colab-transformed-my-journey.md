@@ -29,7 +29,7 @@ By our fourth and fifth semesters, we were exploring cloud computing, DevOps pip
 
 We even hosted workshops on DevOps and web development. And these weren’t senior projects — they were led by students in their fourth semester. That’s the kind of confidence COLAB instilled in us.
 
-![Student Presenting](assets/images/colab-presentation.jpeg)  
+![Student Presenting](assets/img/colab-presentation.jpeg)  
 *A student presenting in a COLAB session.*
 
 ## The Ripple Effect: From Campus to Careers
@@ -51,6 +51,6 @@ If there’s one thing COLAB taught me, it’s this: when the right people come 
 
 And maybe that’s the most important lesson of all. Whether you’re a student, a team lead, or just someone trying to get better at what you do — seek out (or create) your own COLAB. The results might surprise you.
 
-![Celebration](assets/images/team-celebration.jpg)  
-*Celebrating the success of a collaborative team.*
+![Celebration](assets/img/team-celebration.jpg)  
+*A group photo after System Adminstration Workshop on GitHub Local Hackday in 2018*
 
