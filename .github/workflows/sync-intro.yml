@@ -1,0 +1,32 @@
+name: Sync Intro to Website
+on:
+  push:
+    paths:
+      - README.md
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout intro repo
+        uses: actions/checkout@v3
+
+      - name: Checkout website repo
+        uses: actions/checkout@v3
+        with:
+          repository: essayyzed/essayyzed.github.io
+          path: website
+          token: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
+
+      - name: Copy intro
+        run: |
+          cp README.md website/_includes/intro.md
+
+      - name: Commit & Push
+        run: |
+          cd website
+          git config user.name "github-actions"
+          git config user.email "actions@github.com"
+          git add _includes/intro.md
+          git commit -m "Sync intro from README" || echo "No changes"
+          git push origin HEAD:main
