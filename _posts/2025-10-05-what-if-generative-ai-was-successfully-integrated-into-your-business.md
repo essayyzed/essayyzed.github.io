@@ -2,7 +2,7 @@
 layout: post
 title: "What If Generative AI Was Successfully Integrated Into Your Business?"
 date: 2025-10-05
-author: Your Name
+author: Asad Zaman
 categories: [AI, Business Strategy, Technology]
 tags: [Generative AI, Business Transformation, McKinsey, MIT, Adoption Challenges]
 description: "An in-depth look at what happens when generative AI is successfully integrated into business, what drives adoption, and how companies can overcome common barriers."
