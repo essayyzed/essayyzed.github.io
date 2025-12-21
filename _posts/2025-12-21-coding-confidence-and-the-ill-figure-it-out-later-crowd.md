@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Coding, Confidence, and the 'I’ll Figure It Out Later' Crowd"
-date: 2025-05-01
+date: 2025-12-21
 categories: [programming, education, AI]
 excerpt: "Coding isn’t dead—it’s evolving. Why understanding the fundamentals still matters in a post-AI world."
 ---
