@@ -1,0 +1,435 @@
+---
+import BaseHead from "../components/BaseHead.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import ColorScript from "../components/ColorScript.astro";
+import { SITE_TITLE } from "../config";
+---
+
+<!doctype html>
+<html lang="en-us">
+	<BaseHead title={`About · ${SITE_TITLE}`} description="Generative AI Engineer, Technology Consultant, and Computer Science Major" />
+	<body>
+		<Header title={SITE_TITLE} />
+		<main>
+			<article class="about-page">
+				<header class="page-header">
+					<h1>Syed Asad Zaman</h1>
+					<p class="subtitle">Generative AI Engineer · IBM Consulting · Islamabad, Pakistan</p>
+				</header>
+
+				<section class="intro-block">
+					<p>
+						I design and deliver production-grade AI systems using large language models (LLMs), 
+						retrieval-augmented generation (RAG), and prompt engineering. At IBM Consulting, I've built 
+						enterprise solutions for intelligent diagnostics, customer experience management, and 
+						automated support agents across multiple industries.
+					</p>
+				</section>
+
+				<section class="section-block">
+					<h2>What I'm Building Now</h2>
+					<p class="section-intro">Currently at IBM (2 years 10 months), working across multiple roles:</p>
+
+					<div class="role-card">
+						<div class="role-header">
+							<h3>Maximo Consultant</h3>
+							<span class="timeline">May 2024 - Present</span>
+						</div>
+						<p>Leading IBM Maximo implementations with focus on:</p>
+						<ul>
+							<li><strong>Application Designer</strong>: Customizing Maximo applications, creating intuitive interfaces</li>
+							<li><strong>Database Configuration</strong>: Managing domains for efficient data organization</li>
+							<li><strong>Automation Scripting</strong>: Streamlining processes and extending functionality</li>
+							<li><strong>Java Customization</strong>: Building tailored solutions and enhancing core features</li>
+						</ul>
+					</div>
+
+					<div class="role-card">
+						<div class="role-header">
+							<h3>AI Engineer</h3>
+							<span class="timeline">Oct 2024 - Present</span>
+						</div>
+						<p>Building production-ready GenAI platforms:</p>
+						
+						<div class="project-highlight">
+							<h4>DB HealthWatch</h4>
+							<p>GenAI-powered assistant for intelligent database diagnostics using LangChain, GPT-4, FAISS, and RAG.</p>
+							<ul>
+								<li>Reduced average diagnosis time by <strong>60%</strong></li>
+								<li>Improved incident response efficiency by <strong>35%</strong></li>
+								<li>Increased diagnostic coverage by <strong>40%</strong></li>
+							</ul>
+							<p class="tech-stack">Python · LangChain · GPT-4 · FAISS · RAG</p>
+						</div>
+
+						<div class="project-highlight">
+							<h4>MediCare.AI</h4>
+							<p>Intelligent patient engagement platform with multi-channel AI assistant.</p>
+							<ul>
+								<li>24/7 automated appointment management and clinic information</li>
+								<li>Multi-channel support (WhatsApp, Telegram, Instagram)</li>
+								<li>RAG-powered accurate information retrieval</li>
+							</ul>
+							<p class="tech-stack">Python · LangGraph · LangChain · Vector Databases</p>
+						</div>
+					</div>
+
+					<div class="role-card">
+						<div class="role-header">
+							<h3>Package Consultant</h3>
+							<span class="timeline">Sep 2023 - May 2024</span>
+						</div>
+						<p>
+							Level 2 AMS consultant supporting Incident Management and Service delivery of Vodafone's 
+							CVM ecosystem (IBM Data Stage, Unica CVM Suite, Oracle DB, Middleware). Managed major 
+							upgrades and handled incidents, deployments, and hotfixes.
+						</p>
+					</div>
+				</section>
+
+				<section class="section-block">
+					<h2>Previous Experience</h2>
+
+					<div class="experience-item">
+						<div class="exp-header">
+							<h3>Giggso</h3>
+							<span class="timeline">Aug 2022 - Nov 2022 · Remote</span>
+						</div>
+						<p class="role-title">Trainee Machine Learning Engineer</p>
+						<p>
+							Led the Data Observability module for ML pipelines using Soda Core, Airflow, and 
+							Great Expectations. Integrated observability APIs and improved ML debugging capabilities 
+							for production systems.
+						</p>
+					</div>
+
+					<div class="experience-item">
+						<div class="exp-header">
+							<h3>COLAB @ FAST NUCES</h3>
+							<span class="timeline">Jun 2021 - Jul 2022 · Peshawar</span>
+						</div>
+						<p class="role-title">Research Group Lead</p>
+						<p>
+							Led research team of 30+ students under Dr. Mohammad Nauman. Managed hiring, training, 
+							and roadmap development. Contributed to funded research on Differential Privacy for 
+							sensitive data protection.
+						</p>
+					</div>
+				</section>
+
+				<section class="section-block">
+					<h2>Education & Research</h2>
+
+					<div class="education-item">
+						<h3>Bachelor's in Computer Science</h3>
+						<p class="institution">National University of Computer and Emerging Sciences (FAST NUCES) · 2018 - 2022</p>
+					</div>
+
+					<div class="research-item">
+						<h4>Final Year Project</h4>
+						<p class="project-title"><strong>HyperDrive: Autonomous Self-Driving Cars using Deep Reinforcement Learning</strong></p>
+						<p>
+							Goal-oriented autonomous navigation in simulated urban settings using DQN, DDQN, 
+							and D* Search for route planning in dynamic environments.
+						</p>
+						<p class="tech-stack">CARLA · TensorFlow · OpenCV · Gym</p>
+					</div>
+
+					<div class="research-item">
+						<h4>Research Project</h4>
+						<p class="project-title"><strong>Attribute Division using Three Way Decisions for Differential Privacy</strong></p>
+						<p>
+							Funded project under ORIC focusing on dividing attributes of sensitive data 
+							using Differential Privacy techniques.
+						</p>
+					</div>
+				</section>
+
+				<section class="section-block">
+					<h2>Life Outside Code</h2>
+					<p>
+						I enjoy exploring new technologies and contributing to open-source projects. Passionate 
+						about writing technical content on AI and machine learning, regularly sharing insights 
+						through my blog. I believe in continuous learning and staying updated with the latest 
+						developments in artificial intelligence.
+					</p>
+					<p>
+						Interests: Technical writing, open-source contributions, reading, photography
+					</p>
+				</section>
+
+				<section class="contact-section">
+					<h2>Get in Touch</h2>
+					<p>For collaboration, opportunities, or queries about my work:</p>
+					<div class="contact-links">
+						<a href="mailto:essayyzed@gmail.com">📧 essayyzed@gmail.com</a>
+						<a href="https://www.linkedin.com/in/essayyzed/" target="_blank" rel="noopener">💼 LinkedIn</a>
+						<a href="https://github.com/essayyzed" target="_blank" rel="noopener">🔗 GitHub</a>
+						<a href="https://twitter.com/essayyzed" target="_blank" rel="noopener">🐦 Twitter</a>
+					</div>
+				</section>
+			</article>
+		</main>
+		<Footer />
+		<ColorScript />
+	</body>
+</html>
+
+<style>
+	.about-page {
+		max-width: 70ch;
+		margin: 0 auto;
+	}
+
+	.page-header {
+		margin-bottom: 3rem;
+		text-align: center;
+	}
+
+	.page-header h1 {
+		margin-bottom: 0.5rem;
+		font-size: 2.5rem;
+	}
+
+	.subtitle {
+		color: var(--gray);
+		font-size: 1.1rem;
+		margin: 0;
+	}
+
+	.intro-block {
+		margin: 3rem 0;
+		padding: 2rem;
+		background: var(--code-bg, #f5f5f5);
+		border-radius: 8px;
+		border-left: 4px solid var(--link-col);
+	}
+
+	.intro-block p {
+		margin: 0;
+		font-size: 1.1rem;
+		line-height: 1.7;
+	}
+
+	.section-block {
+		margin: 4rem 0;
+	}
+
+	.section-block h2 {
+		margin-bottom: 1.5rem;
+		padding-bottom: 0.5rem;
+		border-bottom: 2px solid var(--border-color, #ddd);
+	}
+
+	.section-intro {
+		margin-bottom: 2rem;
+		color: var(--gray);
+		font-size: 1.05rem;
+	}
+
+	.role-card {
+		margin: 2rem 0;
+		padding: 1.5rem;
+		border: 1px solid var(--border-color, #ddd);
+		border-radius: 8px;
+	}
+
+	.role-header {
+		display: flex;
+		justify-content: space-between;
+		align-items: baseline;
+		margin-bottom: 1rem;
+		flex-wrap: wrap;
+		gap: 0.5rem;
+	}
+
+	.role-header h3 {
+		margin: 0;
+		font-size: 1.4rem;
+	}
+
+	.timeline {
+		color: var(--gray);
+		font-size: 0.9rem;
+	}
+
+	.role-card p {
+		margin: 1rem 0;
+		line-height: 1.7;
+	}
+
+	.role-card ul {
+		margin: 1rem 0;
+		padding-left: 1.5rem;
+	}
+
+	.role-card li {
+		margin: 0.5rem 0;
+		line-height: 1.6;
+	}
+
+	.project-highlight {
+		margin: 1.5rem 0;
+		padding: 1.5rem;
+		background: var(--code-bg, #f5f5f5);
+		border-radius: 6px;
+	}
+
+	.project-highlight h4 {
+		margin-top: 0;
+		margin-bottom: 0.75rem;
+		color: var(--link-col);
+		font-size: 1.2rem;
+	}
+
+	.project-highlight p {
+		margin: 0.75rem 0;
+	}
+
+	.project-highlight ul {
+		margin: 1rem 0;
+		padding-left: 1.5rem;
+	}
+
+	.project-highlight li {
+		margin: 0.5rem 0;
+	}
+
+	.tech-stack {
+		color: var(--gray);
+		font-size: 0.9rem;
+		font-style: italic;
+		margin-top: 1rem !important;
+	}
+
+	.experience-item {
+		margin: 2rem 0;
+		padding: 1.5rem;
+		border-left: 3px solid var(--link-col);
+		background: var(--code-bg, #f5f5f5);
+		border-radius: 4px;
+	}
+
+	.exp-header {
+		display: flex;
+		justify-content: space-between;
+		align-items: baseline;
+		margin-bottom: 0.5rem;
+		flex-wrap: wrap;
+		gap: 0.5rem;
+	}
+
+	.exp-header h3 {
+		margin: 0;
+		font-size: 1.3rem;
+	}
+
+	.role-title {
+		color: var(--gray);
+		font-weight: 500;
+		margin: 0.5rem 0 1rem 0 !important;
+	}
+
+	.education-item {
+		margin: 2rem 0;
+	}
+
+	.education-item h3 {
+		margin-bottom: 0.5rem;
+	}
+
+	.institution {
+		color: var(--gray);
+		margin: 0;
+	}
+
+	.research-item {
+		margin: 2rem 0;
+		padding: 1.5rem;
+		border: 1px solid var(--border-color, #ddd);
+		border-radius: 6px;
+	}
+
+	.research-item h4 {
+		margin-top: 0;
+		color: var(--gray);
+		font-size: 0.9rem;
+		text-transform: uppercase;
+		letter-spacing: 0.05em;
+	}
+
+	.project-title {
+		margin: 0.75rem 0 1rem 0 !important;
+	}
+
+	.contact-section {
+		margin: 4rem 0 2rem 0;
+		padding: 2rem;
+		background: var(--code-bg, #f5f5f5);
+		border-radius: 8px;
+		text-align: center;
+	}
+
+	.contact-section h2 {
+		margin-top: 0;
+	}
+
+	.contact-links {
+		display: flex;
+		justify-content: center;
+		gap: 1.5rem;
+		flex-wrap: wrap;
+		margin-top: 1.5rem;
+	}
+
+	.contact-links a {
+		text-decoration: none;
+		color: var(--link-col);
+		font-weight: 500;
+		transition: opacity 0.2s;
+	}
+
+	.contact-links a:hover {
+		opacity: 0.7;
+	}
+
+	@media (prefers-color-scheme: dark) {
+		.intro-block {
+			background: #1a1a1a;
+		}
+
+		.project-highlight {
+			background: #1a1a1a;
+		}
+
+		.experience-item {
+			background: #1a1a1a;
+		}
+
+		.contact-section {
+			background: #1a1a1a;
+		}
+	}
+
+	@media (max-width: 768px) {
+		.page-header h1 {
+			font-size: 2rem;
+		}
+
+		.subtitle {
+			font-size: 1rem;
+		}
+
+		.role-header,
+		.exp-header {
+			flex-direction: column;
+			align-items: flex-start;
+		}
+
+		.contact-links {
+			flex-direction: column;
+			align-items: center;
+		}
+	}
+</style>
