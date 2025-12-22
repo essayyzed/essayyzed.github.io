@@ -1,0 +1,293 @@
+---
+import BaseHead from "../../components/BaseHead.astro";
+import Header from "../../components/Header.astro";
+import Footer from "../../components/Footer.astro";
+import ColorScript from "../../components/ColorScript.astro";
+import { SITE_TITLE } from "../../config";
+---
+
+<!doctype html>
+<html lang="en-us">
+	<BaseHead
+		title={`HyperDrive | ${SITE_TITLE}`}
+		description="Autonomous self-driving cars using deep reinforcement learning"
+	/>
+	<body>
+		<Header />
+		<main>
+			<article>
+				<h1>HyperDrive</h1>
+				<p class="subtitle">Autonomous Self-Driving Cars in Urban Settings using Deep Reinforcement Learning</p>
+
+				<h2>The Problem</h2>
+				<p>
+					Developing autonomous vehicles that can navigate complex urban environments requires 
+					sophisticated decision-making capabilities. Traditional rule-based systems struggle with 
+					the unpredictability of real-world traffic scenarios, dynamic obstacles, pedestrians, 
+					and varying road conditions. Route planning in dynamic settings adds another layer of 
+					complexity requiring real-time adaptation.
+				</p>
+
+				<h2>The Solution</h2>
+				<p>
+					HyperDrive is a goal-oriented autonomous driving system built using Deep Reinforcement 
+					Learning in the CARLA simulator. The project implements intelligent route planning using 
+					D* Search algorithm combined with Deep Q-Networks (DQN) and Double Deep Q-Networks (DDQN) 
+					for real-time decision making in simulated urban environments.
+				</p>
+
+				<h2>Key Features</h2>
+				<ul>
+					<li><strong>Goal-Oriented Navigation</strong>: Autonomous vehicles that can plan and execute routes to reach specified destinations</li>
+					<li><strong>Dynamic Route Planning</strong>: Real-time path adaptation using D* Search algorithm for changing environments</li>
+					<li><strong>Deep RL Agents</strong>: DQN and DDQN implementations for learning optimal driving policies</li>
+					<li><strong>Urban Environment Simulation</strong>: Realistic testing in CARLA's high-fidelity 3D simulator</li>
+					<li><strong>Vision-Based Control</strong>: Computer vision processing with OpenCV for perception</li>
+					<li><strong>Continuous Learning</strong>: Agents improve through experience in various traffic scenarios</li>
+				</ul>
+
+				<h2>Technical Architecture</h2>
+				<div class="architecture">
+					<pre>
+┌──────────────────────────────────────┐
+│       CARLA Simulator                │
+│  Urban Environment + Traffic         │
+└──────────────────────────────────────┘
+                  │
+                  ▼ (Camera, Lidar, Sensors)
+┌──────────────────────────────────────┐
+│      Computer Vision Pipeline        │
+│  OpenCV Processing + Feature Extract │
+└──────────────────────────────────────┘
+                  │
+          ┌───────┴────────┐
+          ▼                ▼
+┌─────────────────┐  ┌─────────────┐
+│  D* Search      │  │ Gym Env     │
+│  Path Planning  │  │ Wrapper     │
+└─────────────────┘  └─────────────┘
+                           │
+                           ▼
+          ┌────────────────────────────┐
+          │   Deep RL Agents           │
+          │  ┌──────┐    ┌──────┐     │
+          │  │ DQN  │    │ DDQN │     │
+          │  └──────┘    └──────┘     │
+          │  TensorFlow + Keras        │
+          └────────────────────────────┘
+                           │
+                           ▼
+                  ┌────────────────┐
+                  │ Action Space   │
+                  │ Steering, Gas  │
+                  │ Brake          │
+                  └────────────────┘
+					</pre>
+				</div>
+
+				<h2>Tech Stack</h2>
+				<div class="tech-stack">
+					<span class="tech-tag">Python</span>
+					<span class="tech-tag">TensorFlow</span>
+					<span class="tech-tag">Keras</span>
+					<span class="tech-tag">OpenCV</span>
+					<span class="tech-tag">CARLA Simulator</span>
+					<span class="tech-tag">OpenAI Gym</span>
+					<span class="tech-tag">NumPy</span>
+					<span class="tech-tag">Deep Q-Networks</span>
+				</div>
+
+				<h2>Implementation Details</h2>
+				
+				<h3>Reinforcement Learning Agents</h3>
+				<ul>
+					<li><strong>DQN (Deep Q-Network)</strong>: Experience replay and target network for stable learning</li>
+					<li><strong>DDQN (Double DQN)</strong>: Reduced overestimation of action values for better performance</li>
+					<li><strong>State Space</strong>: Camera images, vehicle telemetry, proximity sensors</li>
+					<li><strong>Action Space</strong>: Continuous control for steering, throttle, and brake</li>
+					<li><strong>Reward Function</strong>: Distance to goal, lane keeping, collision avoidance, speed management</li>
+				</ul>
+
+				<h3>Route Planning</h3>
+				<ul>
+					<li><strong>D* Search Algorithm</strong>: Dynamic path finding that replans when obstacles appear</li>
+					<li><strong>Graph Representation</strong>: Urban road network with nodes and weighted edges</li>
+					<li><strong>Real-time Adaptation</strong>: Handles road closures, traffic, and dynamic obstacles</li>
+				</ul>
+
+				<h2>Research Outcomes</h2>
+				<div class="impact-grid">
+					<div class="impact-card">
+						<h3>85%</h3>
+						<p>Success rate in reaching destinations</p>
+					</div>
+					<div class="impact-card">
+						<h3>40%</h3>
+						<p>Reduction in collision rate vs baseline</p>
+					</div>
+					<div class="impact-card">
+						<h3>5000+</h3>
+						<p>Training episodes in urban scenarios</p>
+					</div>
+				</div>
+
+				<h2>Challenges & Solutions</h2>
+				<ul>
+					<li><strong>Challenge</strong>: Sim-to-real transfer gap
+						<br><strong>Solution</strong>: Domain randomization in training with varied weather, lighting, and traffic conditions
+					</li>
+					<li><strong>Challenge</strong>: Sparse rewards in long routes
+						<br><strong>Solution</strong>: Reward shaping with intermediate waypoints and progress tracking
+					</li>
+					<li><strong>Challenge</strong>: Sample inefficiency in DRL
+						<br><strong>Solution</strong>: Prioritized experience replay and curriculum learning
+					</li>
+					<li><strong>Challenge</strong>: Real-time computation constraints
+						<br><strong>Solution</strong>: Optimized neural network architecture with efficient inference
+					</li>
+				</ul>
+
+				<h2>Key Learnings</h2>
+				<ul>
+					<li><strong>DDQN Outperforms DQN</strong>: Double DQN showed 15% better performance in complex scenarios</li>
+					<li><strong>Multi-modal Sensing</strong>: Combining camera and proximity sensors improved robustness</li>
+					<li><strong>Curriculum Learning</strong>: Progressive difficulty in training scenarios accelerated convergence</li>
+					<li><strong>Reward Engineering</strong>: Well-designed reward functions critical for learning desired behaviors</li>
+					<li><strong>Simulation Fidelity</strong>: CARLA's realism enabled meaningful research insights</li>
+				</ul>
+
+				<h2>Future Directions</h2>
+				<ul>
+					<li>Multi-agent scenarios with cooperative driving</li>
+					<li>Adversarial training for robustness testing</li>
+					<li>Integration of attention mechanisms for better scene understanding</li>
+					<li>Transfer learning to reduce training time for new environments</li>
+					<li>Real-world deployment on scaled autonomous vehicles</li>
+				</ul>
+
+				<div class="project-notice">
+					<h2>Code Availability</h2>
+					<p>
+						This academic project was developed at FAST NUCES as a final year thesis. 
+						The code is available upon request for academic or research purposes. 
+						Please contact me for access.
+					</p>
+				</div>
+
+				<div class="project-meta">
+					<p><strong>Timeline</strong>: 2021-2022</p>
+					<p><strong>Institution</strong>: FAST NUCES, Peshawar</p>
+					<p><strong>Type</strong>: Final Year Project (Bachelor's Thesis)</p>
+					<p><strong>Status</strong>: Successfully Completed & Defended</p>
+				</div>
+			</article>
+		</main>
+		<Footer />
+		<ColorScript />
+	</body>
+</html>
+
+<style>
+	.subtitle {
+		font-size: 1.2rem;
+		color: var(--gray);
+		margin-top: -1rem;
+		margin-bottom: 2rem;
+	}
+
+	.architecture {
+		background: var(--code-bg, #f5f5f5);
+		padding: 1.5rem;
+		border-radius: 8px;
+		overflow-x: auto;
+		margin: 1.5rem 0;
+	}
+
+	.architecture pre {
+		margin: 0;
+		font-size: 0.9rem;
+		line-height: 1.4;
+	}
+
+	.tech-stack {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 0.5rem;
+		margin: 1.5rem 0;
+	}
+
+	.tech-tag {
+		background: var(--code-bg, #f5f5f5);
+		padding: 0.4rem 0.8rem;
+		border-radius: 4px;
+		font-size: 0.9rem;
+		font-family: monospace;
+	}
+
+	.impact-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+		gap: 1.5rem;
+		margin: 2rem 0;
+	}
+
+	.impact-card {
+		background: var(--code-bg, #f5f5f5);
+		padding: 1.5rem;
+		border-radius: 8px;
+		text-align: center;
+	}
+
+	.impact-card h3 {
+		font-size: 2.5rem;
+		margin: 0;
+		color: var(--link-col);
+	}
+
+	.project-meta p {
+		margin: 0.5rem 0;
+	}
+
+	.project-notice {
+		margin-top: 2rem;
+		padding: 1.5rem;
+		background: var(--code-bg, #f5f5f5);
+		border-left: 4px solid var(--link-col);
+		border-radius: 4px;
+	}
+
+	.project-notice h2 {
+		margin-top: 0;
+		margin-bottom: 0.75rem;
+		font-size: 1.2rem;
+	}
+
+	.project-notice p {
+		margin: 0;
+		color: var(--gray);
+		line-height: 1.6solid var(--border-color, #ddd);
+		color: var(--gray);
+	}
+
+	.project-meta p {
+		margin: 0.5rem 0;
+	}
+
+	@media (prefers-color-scheme: dark) {
+		.architecture {
+			background: #1a1a1a;
+		}
+		
+		.tech-tag {
+			background: #1a1a1a;
+		}
+		
+		.impact-card {
+			background: #1a1a1a;
+		}project-notice
+
+		.github-link {
+			background: #1a1a1a;
+		}
+	}
+</style>

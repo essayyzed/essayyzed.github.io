@@ -1,0 +1,83 @@
+---
+import BaseHead from "../components/BaseHead.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import ColorScript from "../components/ColorScript.astro";
+import { SITE_TITLE } from "../config";
+---
+
+<!doctype html>
+<html lang="en-us">
+	<BaseHead
+		title={`news | ${SITE_TITLE}`}
+		description="Latest updates and announcements"
+	/>
+	<body>
+		<Header />
+		<main>
+			<h1>news</h1>
+
+			<table>
+				<tbody>
+					<tr>
+						<td>Dec 22, 2025</td>
+						<td>Migrated to a new website theme powered by Astro. Now completing unfinished blogs (both technical and memoirs).</td>
+					</tr>
+					<tr>
+						<td>2024</td>
+						<td>Joined IBM's Generative AI Center of Excellence, building production-ready LLM systems</td>
+					</tr>
+					<tr>
+						<td>Mar 2023</td>
+						<td>Joined IBM Consulting as Package Consultant, focusing on AI/ML solutions</td>
+					</tr>
+					<tr>
+						<td>Aug 2022</td>
+						<td>Started as Trainee ML Engineer at Giggso, working on data observability systems</td>
+					</tr>
+					<tr>
+						<td>Jun 2022</td>
+						<td>Graduated from FAST NUCES with B.S. in Computer Science</td>
+					</tr>
+					<tr>
+						<td>Oct 2018</td>
+						<td>Started journey at FAST NUCES, joined COLAB as Team Lead</td>
+					</tr>
+				</tbody>
+			</table>
+		</main>
+		<Footer />
+		<ColorScript />
+	</body>
+</html>
+
+<style>
+	table {
+		width: 100%;
+		border-collapse: collapse;
+		margin: 2rem 0;
+	}
+
+	tbody tr {
+		border-bottom: 1px solid var(--border-color);
+	}
+
+	tbody tr:last-child {
+		border-bottom: none;
+	}
+
+	td {
+		padding: 1rem 0;
+		vertical-align: top;
+	}
+
+	td:first-child {
+		width: 120px;
+		font-weight: 500;
+		white-space: nowrap;
+	}
+
+	td:last-child {
+		padding-left: 2rem;
+	}
+</style>

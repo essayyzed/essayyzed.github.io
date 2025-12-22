@@ -1,0 +1,266 @@
+---
+import BaseHead from "../../components/BaseHead.astro";
+import Header from "../../components/Header.astro";
+import Footer from "../../components/Footer.astro";
+import ColorScript from "../../components/ColorScript.astro";
+import { SITE_TITLE } from "../../config";
+---
+
+<!doctype html>
+<html lang="en-us">
+	<BaseHead
+		title={`DB HealthWatch | ${SITE_TITLE}`}
+		description="GenAI-powered assistant for intelligent database diagnostics"
+	/>
+	<body>
+		<Header />
+		<main>
+			<article>
+				<h1>DB HealthWatch</h1>
+				<p class="subtitle">GenAI-Powered Database Diagnostics Platform</p>
+
+				<h2>The Problem</h2>
+				<p>
+					Database administrators and DevOps teams spend hours manually analyzing AWR reports, 
+					performance logs, and system metrics to diagnose issues. The process is tedious, 
+					error-prone, and requires deep domain expertise. Critical performance degradations 
+					often go unnoticed until they impact production systems.
+				</p>
+
+				<h2>The Solution</h2>
+				<p>
+					DB HealthWatch is an intelligent GenAI assistant that transforms database diagnostics 
+					through natural language interaction and automated analysis. Built with LangChain, 
+					GPT-4, and FAISS, the platform enables engineers to query complex database metrics 
+					using plain English and receive actionable insights in seconds.
+				</p>
+
+				<h2>Key Features</h2>
+				<ul>
+					<li><strong>Natural Language Querying</strong>: Ask questions like "What caused the CPU spike at 3 AM?" and get context-aware answers</li>
+					<li><strong>Proactive Alerting</strong>: Automated classification system (Good, Warning, Critical) with intelligent threshold detection</li>
+					<li><strong>Specialized Agents</strong>: Dedicated analysis modules for CPU load, memory usage, I/O patterns, and query performance</li>
+					<li><strong>Automated Email Reports</strong>: Rich context alerts with recommendations sent to relevant teams</li>
+					<li><strong>RAG Architecture</strong>: Retrieval Augmented Generation for accurate, hallucination-free diagnostics</li>
+				</ul>
+
+				<h2>Technical Architecture</h2>
+				<div class="architecture">
+					<pre>
+┌─────────────────┐
+│  AWR Reports    │
+│  Performance    │──────┐
+│  Logs           │      │
+└─────────────────┘      │
+                         ▼
+                   ┌──────────┐
+                   │  FAISS   │
+                   │  Vector  │
+                   │   Store  │
+                   └──────────┘
+                         │
+                         ▼
+┌──────────────────────────────────────┐
+│         LangChain Pipeline           │
+│  ┌────────┐  ┌────────┐  ┌────────┐ │
+│  │ CPU    │  │ Memory │  │  I/O   │ │
+│  │ Agent  │  │ Agent  │  │ Agent  │ │
+│  └────────┘  └────────┘  └────────┘ │
+└──────────────────────────────────────┘
+                         │
+                         ▼
+                   ┌──────────┐
+                   │  GPT-4   │
+                   │ Analysis │
+                   └──────────┘
+                         │
+                         ▼
+          ┌──────────────┴──────────────┐
+          │                             │
+    ┌──────────┐                 ┌──────────┐
+    │ Email    │                 │ Web UI   │
+    │ Alerts   │                 │ Dashboard│
+    └──────────┘                 └──────────┘
+					</pre>
+				</div>
+
+				<h2>Tech Stack</h2>
+				<div class="tech-stack">
+					<span class="tech-tag">Python</span>
+					<span class="tech-tag">LangChain</span>
+					<span class="tech-tag">OpenAI GPT-4</span>
+					<span class="tech-tag">FAISS</span>
+					<span class="tech-tag">RAG</span>
+					<span class="tech-tag">Email Automation</span>
+					<span class="tech-tag">Prompt Engineering</span>
+				</div>
+
+				<h2>Impact</h2>
+				<div class="impact-grid">
+					<div class="impact-card">
+						<h3>60%</h3>
+						<p>Reduction in average diagnosis time</p>
+					</div>
+					<div class="impact-card">
+						<h3>35%</h3>
+						<p>Improvement in incident response efficiency</p>
+					</div>
+					<div class="impact-card">
+						<h3>40%</h3>
+						<p>Increase in diagnostic coverage</p>
+					</div>
+				</div>
+
+				<h2>Key Learnings</h2>
+				<ul>
+					<li><strong>Context is King</strong>: RAG architecture proved essential for grounding LLM responses in actual database metrics rather than hallucinated insights</li>
+					<li><strong>Agent Specialization</strong>: Breaking down diagnostics into specialized agents (CPU, Memory, I/O) improved accuracy and reduced token costs</li>
+					<li><strong>Prompt Engineering Matters</strong>: Iterative refinement of prompts increased diagnostic accuracy from 72% to 94%</li>
+					<li><strong>Human-in-the-Loop</strong>: Critical alerts still require human verification - AI augments but doesn't replace expertise</li>
+				</ul>
+
+				<h2>What's Next</h2>
+				<p>
+					Future enhancements include predictive analytics for proactive issue prevention, 
+					integration with more database systems (PostgreSQL, MongoDB), and automated 
+					remediation suggestions with confidence scores.
+				</p>
+
+				<div class="project-links">
+					<h2>Resources</h2>
+					<a href="https://github.com/essayyzed/dbh-watch" class="resource-link" target="_blank" rel="noopener">
+						🔗 View Code on GitHub
+					</a>
+				</div>
+
+				<div class="project-meta">
+					<p><strong>Timeline</strong>: Oct 2024 - Present</p>
+					<p><strong>Role</strong>: AI Engineer at IBM</p>
+					<p><strong>Type</strong>: Enterprise Production System</p>
+				</div>
+			</article>
+		</main>
+		<Footer />
+		<ColorScript />
+	</body>
+</html>
+
+<style>
+	.subtitle {
+		font-size: 1.2rem;
+		color: var(--gray);
+		margin-top: -1rem;
+		margin-bottom: 2rem;
+	}
+
+	.architecture {
+		background: var(--code-bg, #f5f5f5);
+		padding: 1.5rem;
+		border-radius: 8px;
+		overflow-x: auto;
+		margin: 1.5rem 0;
+	}
+
+	.architecture pre {
+		margin: 0;
+		font-size: 0.9rem;
+		line-height: 1.4;
+	}
+
+	.tech-stack {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 0.5rem;
+		margin: 1.5rem 0;
+	}
+
+	.tech-tag {
+		background: var(--code-bg, #f5f5f5);
+		padding: 0.4rem 0.8rem;
+		border-radius: 4px;
+		font-size: 0.9rem;
+		font-family: monospace;
+	}
+
+	.impact-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+		gap: 1.5rem;
+		margin: 2rem 0;
+	}
+
+	.impact-card {
+		background: var(--code-bg, #f5f5f5);
+		padding: 1.5rem;
+		border-radius: 8px;
+		text-align: center;
+	}
+
+	.impact-card h3 {
+		font-size: 2.5rem;
+		margin: 0;
+		color: var(--link-col);
+	}
+
+	.impact-card p {
+		margin: 0.5rem 0 0 0;
+		color: var(--gray);
+	}
+
+	.project-meta {
+		margin-top: 3rem;
+		padding-top: 2rem;
+		border-top: 1px solid var(--border-color, #ddd);
+		color: var(--gray);
+	}
+
+	.project-meta p {
+		margin: 0.5rem 0;
+	}
+
+	.project-links {
+		margin-top: 2rem;
+		padding: 1.5rem;
+		background: var(--code-bg, #f5f5f5);
+		border-radius: 8px;
+	}
+
+	.project-links h2 {
+		margin-top: 0;
+		margin-bottom: 1rem;
+		font-size: 1.3rem;
+	}
+
+		.project-links {
+			background: #1a1a1a;
+		}
+
+	.resource-link {
+		display: inline-block;
+		padding: 0.75rem 1.5rem;
+		background: var(--link-col);
+		color: white;
+		text-decoration: none;
+		border-radius: 6px;
+		font-weight: 500;
+		transition: opacity 0.2s;
+	}
+
+	.resource-link:hover {
+		opacity: 0.9;
+	}
+
+	@media (prefers-color-scheme: dark) {
+		.architecture {
+			background: #1a1a1a;
+		}
+		
+		.tech-tag {
+			background: #1a1a1a;
+		}
+		
+		.impact-card {
+			background: #1a1a1a;
+		}
+	}
+</style>

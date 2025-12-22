@@ -1,0 +1,118 @@
+---
+import BaseHead from "../components/BaseHead.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import ColorScript from "../components/ColorScript.astro";
+import { SITE_TITLE, SITE_DESCRIPTION } from "../config";
+---
+
+<!doctype html>
+<html lang="en-us">
+	<BaseHead title={`Repositories | ${SITE_TITLE}`} description="Open source repositories and code contributions" />
+	<body>
+		<Header />
+		<main>
+			<content>
+				<h1>Repositories</h1>
+				
+				<h2>👨‍💻 Original GitHub Repositories</h2>
+				
+				<div class="repo-section">
+					<h3>Own Projects</h3>
+					<ul class="repo-list">
+						<li><a href="https://github.com/essayyzed/mcpAdapters" target="_blank" rel="noopener">essayyzed/mcpAdapters</a> - Model Context Protocol adapters</li>
+						<li><a href="https://github.com/essayyzed/dbh-watch" target="_blank" rel="noopener">essayyzed/dbh-watch</a> - Database health monitoring application</li>
+						<li><a href="https://github.com/essayyzed/essayyzed" target="_blank" rel="noopener">essayyzed/essayyzed</a> - Profile README</li>
+					</ul>
+
+					<h3>Academic & Learning Projects</h3>
+					<ul class="repo-list">
+						<li><a href="https://github.com/essayyzed/Run_Length_Encoding" target="_blank" rel="noopener">essayyzed/Run_Length_Encoding</a> - Compression algorithm implementation in C++</li>
+						<li><a href="https://github.com/essayyzed/Programming-Fundamentals" target="_blank" rel="noopener">essayyzed/Programming-Fundamentals</a> - Programming fundamentals coursework</li>
+						<li><a href="https://github.com/essayyzed/Applied-Physics" target="_blank" rel="noopener">essayyzed/Applied-Physics</a> - Applied physics projects and materials</li>
+					</ul>
+				</div>
+				
+				<p><em>Note: This list shows only original repositories. Forked repositories have been excluded.</em></p>
+
+				<h2>💻 Professional Contributions</h2>
+				<p>
+					While many of my contributions are in private company repositories at IBM, I remain an active developer working on:
+				</p>
+				<ul>
+					<li>LLM-powered platforms and AI solutions</li>
+					<li>LangChain and LangGraph implementations</li>
+					<li>Custom RAG (Retrieval Augmented Generation) solutions</li>
+					<li>Backend infrastructure development for GenAI applications</li>
+					<li>DevOps automation and monitoring systems</li>
+				</ul>
+
+				<div class="github-cta">
+					<p><strong>Visit my GitHub:</strong> <a href="https://github.com/essayyzed" target="_blank" rel="noopener">github.com/essayyzed</a></p>
+					<p><em>170+ repositories • 46 contributions in the last year</em></p>
+				</div>
+			</content>
+		</main>
+		<Footer />
+		<ColorScript />
+	</body>
+</html>
+
+<style>
+	.repo-section {
+		margin: 2rem 0;
+	}
+
+	.repo-section h3 {
+		margin-top: 2rem;
+		margin-bottom: 1rem;
+		color: var(--gray);
+		font-size: 1.2rem;
+	}
+
+	.repo-list {
+		list-style: none;
+		padding: 0;
+		margin: 0 0 1rem 0;
+	}
+
+	.repo-list li {
+		margin: 0.5rem 0;
+		padding-left: 1.5rem;
+		position: relative;
+	}
+
+	.repo-list li:before {
+		content: "→";
+		position: absolute;
+		left: 0;
+		color: var(--gray);
+	}
+
+	.repo-list a {
+		text-decoration: none;
+		color: var(--link-col);
+	}
+
+	.repo-list a:hover {
+		text-decoration: underline;
+	}
+
+	.github-cta {
+		margin: 3rem 0;
+		padding: 2rem;
+		background: var(--moretransblack);
+		border-radius: 8px;
+		text-align: center;
+	}
+
+	.github-cta p {
+		margin: 0.5rem 0;
+	}
+
+	@media (prefers-color-scheme: dark) {
+		.github-cta {
+			background: var(--moretranswhite);
+		}
+	}
+</style>

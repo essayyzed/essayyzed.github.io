@@ -1,0 +1,397 @@
+---
+import { getCollection } from "astro:content";
+import BaseHead from "../components/BaseHead.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import HomePosts from "../components/HomePosts.astro";
+import ColorScript from "../components/ColorScript.astro";
+import { SITE_TITLE, SITE_DESCRIPTION } from "../config";
+
+const posts = await getCollection("posts");
+---
+
+<!doctype html>
+<html lang="en-us">
+	<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+	<body>
+		<Header title={SITE_TITLE} />
+		<main>
+			<section class="intro">
+				<h1>Syed Asad Zaman</h1>
+				<p class="tagline">Generative AI Engineer · IBM Consulting · Islamabad, Pakistan</p>
+				<p class="bio">
+					I build production AI systems using LangChain, GPT-4, and RAG architectures at IBM. 
+					Specializing in intelligent diagnostics, multi-agent systems, and enterprise GenAI platforms 
+					that reduce operational overhead and improve efficiency.
+				</p>
+				<div class="quick-stats">
+					<span>📍 Islamabad</span>
+					<span>💼 IBM (2+ years)</span>
+					<span>🤖 LangChain · RAG · LLMs</span>
+				</div>
+			</section>
+
+			<hr />
+
+			<section class="current-work">
+				<h2>What I'm Building Now</h2>
+				<p>
+					Currently at IBM, I'm working across multiple roles building production-ready GenAI systems: 
+					<strong>DB HealthWatch</strong> (database diagnostics with 60% faster diagnosis), 
+					<strong>MediCare.AI</strong> (patient engagement platform with 24/7 multi-channel support), 
+					and <strong>IBM Maximo</strong> customizations for enterprise clients. 
+					Previously built <strong>HyperDrive</strong>, an autonomous driving system using Deep RL.
+				</p>
+			</section>
+
+			<hr />
+
+			<h2><a href="/projects">featured projects</a></h2>
+			
+			<div class="featured-projects">
+				<article class="project-card">
+					<div class="project-header">
+						<h3><a href="/projects/db-healthwatch">DB HealthWatch</a></h3>
+						<span class="project-tag">Production</span>
+					</div>
+					<p>GenAI database diagnostics with 60% faster diagnosis time using LangChain, GPT-4, and RAG</p>
+					<div class="tech-badges">
+						<span>LangChain</span>
+						<span>GPT-4</span>
+						<span>FAISS</span>
+						<span>RAG</span>
+					</div>
+				</article>
+				
+				<article class="project-card">
+					<div class="project-header">
+						<h3><a href="/projects/medicare-ai">MediCare.AI</a></h3>
+						<span class="project-tag">Production</span>
+					</div>
+					<p>Intelligent patient engagement platform with multi-channel AI assistant (WhatsApp, Telegram, Instagram)</p>
+					<div class="tech-badges">
+						<span>LangGraph</span>
+						<span>LangChain</span>
+						<span>Multi-Agent</span>
+					</div>
+				</article>
+				
+				<article class="project-card">
+					<div class="project-header">
+						<h3><a href="/projects/hyperdrive">HyperDrive</a></h3>
+						<span class="project-tag">Research</span>
+					</div>
+					<p>Autonomous self-driving cars using Deep RL, DQN/DDQN, and D* path planning in CARLA simulator</p>
+					<div class="tech-badges">
+						<span>Deep RL</span>
+						<span>TensorFlow</span>
+						<span>CARLA</span>
+					</div>
+				</article>
+			</div>
+
+			<p class="section-link"><a href="/projects">→ View all projects</a></p>
+
+			<hr />
+
+			<h2><a href="/news">recent updates</a></h2>
+
+			<table>
+				<tbody>
+					<tr>
+						<td>Dec 2024</td>
+						<td>Published blog post: "What Programming is Really About in 2025"</td>
+					</tr>
+					<tr>
+						<td>Oct 2024</td>
+						<td>Started AI Engineer role at IBM's Generative AI Center of Excellence</td>
+					</tr>
+					<tr>
+						<td>May 2024</td>
+						<td>Promoted to Maximo Consultant at IBM</td>
+					</tr>
+				</tbody>
+			</table>
+
+			<p class="section-link"><a href="/news">→ View all news</a></p>
+
+			<hr />
+
+			<h2><a href="/posts">latest writing</a></h2>
+
+			<HomePosts allPosts={posts} />
+
+			<p class="section-link"><a href="/posts">→ View all posts</a></p>
+
+			<hr />
+
+			<section class="contact-section">
+				<h2>Get in Touch</h2>
+				<p>Interested in collaborating on GenAI projects or discussing AI implementations?</p>
+				<div class="contact-links">
+					<a href="mailto:essayyzed@gmail.com" class="contact-link">📧 Email</a>
+					<a href="https://www.linkedin.com/in/essayyzed/" target="_blank" rel="noopener" class="contact-link">💼 LinkedIn</a>
+					<a href="https://github.com/essayyzed" target="_blank" rel="noopener" class="contact-link">🔗 GitHub</a>
+					<a href="https://twitter.com/essayyzed" target="_blank" rel="noopener" class="contact-link">🐦 Twitter</a>
+				</div>
+				<p class="about-link">
+					<a href="/about">→ Read more about my experience and background</a>
+				</p>
+			</section>
+		</main>
+		<Footer />
+		<ColorScript />
+	</body>
+</html>
+
+<style>
+	.intro {
+		margin: 2rem 0 3rem 0;
+	}
+
+	.intro h1 {
+		margin: 0 0 0.5rem 0;
+		font-size: 2.5rem;
+	}
+
+	.tagline {
+		color: var(--gray);
+		font-size: 1.1rem;
+		margin: 0 0 1rem 0;
+	}
+
+	.bio {
+		font-size: 1.05rem;
+		line-height: 1.6;
+		margin: 1.5rem 0;
+	}
+
+	.quick-stats {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 1rem;
+		margin-top: 1.5rem;
+		font-size: 0.95rem;
+	}
+
+	.quick-stats span {
+		background: var(--code-bg, #f5f5f5);
+		padding: 0.5rem 1rem;
+		border-radius: 6px;
+	}
+
+	hr {
+		border: none;
+		border-top: 1px solid var(--border-color, #ddd);
+		margin: 3rem 0;
+	}
+
+	.current-work {
+		margin: 2rem 0;
+	}
+
+	.current-work p {
+		font-size: 1.05rem;
+		line-height: 1.7;
+	}
+
+	.featured-projects {
+		display: grid;
+		gap: 1.5rem;
+		margin: 1.5rem 0;
+	}
+
+	.project-card {
+		border: 1px solid var(--border-color, #ddd);
+		padding: 1.5rem;
+		border-radius: 8px;
+		transition: transform 0.2s, box-shadow 0.2s;
+	}
+
+	.project-card:hover {
+		transform: translateY(-2px);
+		box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+	}
+
+	.project-header {
+		display: flex;
+		justify-content: space-between;
+		align-items: flex-start;
+		margin-bottom: 0.5rem;
+	}
+
+	.project-card h3 {
+		margin: 0;
+	}
+
+	.project-card h3 a {
+		text-decoration: none;
+		color: var(--text-col);
+	}
+
+	.project-card h3 a:hover {
+		color: var(--link-col);
+	}
+
+	.project-tag {
+		background: var(--link-col);
+		color: white;
+		padding: 0.25rem 0.6rem;
+		border-radius: 4px;
+		font-size: 0.75rem;
+		font-weight: 500;
+	}
+
+	.project-card > p {
+		color: var(--gray);
+		line-height: 1.6;
+		margin: 0.75rem 0;
+	}
+
+	.tech-badges {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 0.4rem;
+		margin-top: 1rem;
+	}
+
+	.tech-badges span {
+		background: var(--code-bg, #f5f5f5);
+		padding: 0.25rem 0.6rem;
+		border-radius: 4px;
+		font-size: 0.8rem;
+		font-family: monospace;
+	}
+
+	.section-link {
+		text-align: right;
+		margin: 1rem 0;
+	}
+
+	.section-link a {
+		color: var(--gray);
+		text-decoration: none;
+		font-size: 0.95rem;
+	}
+
+	.section-link a:hover {
+		color: var(--link-col);
+	}
+
+	table {
+		width: 100%;
+		border-collapse: collapse;
+		margin: 1.5rem 0;
+	}
+
+	tbody tr {
+		border-bottom: 1px solid var(--border-color);
+	}
+
+	tbody tr:last-child {
+		border-bottom: none;
+	}
+
+	td {
+		padding: 0.75rem 0;
+		vertical-align: top;
+	}
+
+	td:first-child {
+		width: 100px;
+		font-weight: 500;
+		white-space: nowrap;
+		color: var(--gray);
+	}
+
+	td:last-child {
+		padding-left: 1.5rem;
+	}
+
+	.contact-section {
+		text-align: center;
+		margin: 3rem 0;
+	}
+
+	.contact-section h2 {
+		margin-bottom: 1rem;
+	}
+
+	.contact-section > p {
+		color: var(--gray);
+		margin: 0.5rem 0 1.5rem 0;
+	}
+
+	.contact-links {
+		display: flex;
+		justify-content: center;
+		flex-wrap: wrap;
+		gap: 1rem;
+		margin: 1.5rem 0;
+	}
+
+	.contact-link {
+		background: var(--code-bg, #f5f5f5);
+		padding: 0.75rem 1.5rem;
+		border-radius: 6px;
+		text-decoration: none;
+		color: var(--text-col);
+		transition: background 0.2s;
+		font-weight: 500;
+	}
+
+	.contact-link:hover {
+		background: var(--link-col);
+		color: white;
+	}
+
+	.about-link {
+		margin-top: 2rem;
+		font-size: 0.95rem;
+	}
+
+	.about-link a {
+		color: var(--gray);
+		text-decoration: none;
+	}
+
+	.about-link a:hover {
+		color: var(--link-col);
+	}
+
+	@media (prefers-color-scheme: dark) {
+		.quick-stats span {
+			background: #1a1a1a;
+		}
+
+		.project-card {
+			border-color: #333;
+		}
+
+		.project-card:hover {
+			box-shadow: 0 4px 12px rgba(255, 255, 255, 0.1);
+		}
+
+		.tech-badges span {
+			background: #1a1a1a;
+		}
+
+		.contact-link {
+			background: #1a1a1a;
+		}
+
+		.contact-link:hover {
+			background: var(--link-col);
+		}
+	}
+
+	@media (min-width: 768px) {
+		.intro h1 {
+			font-size: 3rem;
+		}
+
+		.featured-projects {
+			grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+		}
+	}
+</style>

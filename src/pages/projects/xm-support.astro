@@ -1,0 +1,299 @@
+---
+import BaseHead from "../../components/BaseHead.astro";
+import Header from "../../components/Header.astro";
+import Footer from "../../components/Footer.astro";
+import ColorScript from "../../components/ColorScript.astro";
+import { SITE_TITLE } from "../../config";
+---
+
+<!doctype html>
+<html lang="en-us">
+	<BaseHead
+		title={`XM Support | ${SITE_TITLE}`}
+		description="AI-powered customer experience management platform"
+	/>
+	<body>
+		<Header />
+		<main>
+			<article>
+				<h1>XM Support</h1>
+				<p class="subtitle">AI-Powered Customer Experience Management</p>
+
+				<h2>The Problem</h2>
+				<p>
+					Modern businesses face overwhelming customer support volumes with inquiries arriving 
+					through multiple channels at all hours. Support agents spend significant time on 
+					repetitive questions, leading to delayed responses, inconsistent answers, and high 
+					operational costs. Customer satisfaction suffers when inquiries aren't resolved 
+					quickly and accurately.
+				</p>
+
+				<h2>The Solution</h2>
+				<p>
+					XM Support is a FastAPI-based customer support bot that leverages LangChain and 
+					Pinecone to provide instant, accurate responses to customer inquiries. The system 
+					uses Retrieval Augmented Generation (RAG) to ground responses in company knowledge, 
+					reducing ticket volumes while improving customer satisfaction scores.
+				</p>
+
+				<h2>Key Features</h2>
+				<ul>
+					<li><strong>24/7 Availability</strong>: Round-the-clock automated support without human intervention</li>
+					<li><strong>Intelligent Query Resolution</strong>: RAG-powered responses from company knowledge base</li>
+					<li><strong>Fast Response Times</strong>: Sub-second query processing with vector similarity search</li>
+					<li><strong>Context-Aware Conversations</strong>: Maintains conversation history for coherent multi-turn dialogues</li>
+					<li><strong>Seamless Escalation</strong>: Automatic handoff to human agents for complex issues</li>
+					<li><strong>Multi-Language Support</strong>: Handles inquiries in multiple languages</li>
+				</ul>
+
+				<h2>Technical Architecture</h2>
+				<div class="architecture">
+					<pre>
+┌──────────────────────────────────────┐
+│   Customer Channels                  │
+│  Web Chat │ Email │ API              │
+└──────────────────────────────────────┘
+                  │
+                  ▼
+┌──────────────────────────────────────┐
+│      FastAPI Backend                 │
+│  Request Handling + Rate Limiting    │
+└──────────────────────────────────────┘
+                  │
+                  ▼
+┌──────────────────────────────────────┐
+│      LangChain Pipeline              │
+│  Query Processing + Intent Detection │
+└──────────────────────────────────────┘
+                  │
+          ┌───────┴────────┐
+          ▼                ▼
+    ┌──────────┐    ┌──────────┐
+    │ Pinecone │    │ OpenAI   │
+    │  Vector  │    │  GPT     │
+    │  Search  │    │ Generate │
+    └──────────┘    └──────────┘
+          │                │
+          └────────┬───────┘
+                   ▼
+          ┌────────────────┐
+          │   Response     │
+          │   + Metadata   │
+          └────────────────┘
+					</pre>
+				</div>
+
+				<h2>Tech Stack</h2>
+				<div class="tech-stack">
+					<span class="tech-tag">Python</span>
+					<span class="tech-tag">FastAPI</span>
+					<span class="tech-tag">LangChain</span>
+					<span class="tech-tag">OpenAI</span>
+					<span class="tech-tag">Pinecone</span>
+					<span class="tech-tag">RAG</span>
+					<span class="tech-tag">Uvicorn</span>
+					<span class="tech-tag">Pydantic</span>
+				</div>
+
+				<h2>Implementation Highlights</h2>
+				<ul>
+					<li><strong>Vector Database</strong>: Pinecone for fast, scalable similarity search across company documentation</li>
+					<li><strong>Embedding Generation</strong>: OpenAI embeddings for semantic understanding of queries</li>
+					<li><strong>RAG Pipeline</strong>: Retrieval-augmented generation prevents hallucinations with factual grounding</li>
+					<li><strong>FastAPI Framework</strong>: High-performance async API with automatic documentation</li>
+					<li><strong>Rate Limiting</strong>: Prevents abuse while ensuring fair resource allocation</li>
+					<li><strong>Logging & Monitoring</strong>: Comprehensive tracking of query patterns and system performance</li>
+				</ul>
+
+				<h2>Business Impact</h2>
+				<div class="impact-grid">
+					<div class="impact-card">
+						<h3>65%</h3>
+						<p>Reduction in support ticket volumes</p>
+					</div>
+					<div class="impact-card">
+						<h3>24/7</h3>
+						<p>Uninterrupted customer support</p>
+					</div>
+					<div class="impact-card">
+						<h3>92%</h3>
+						<p>Customer satisfaction rate (CSAT)</p>
+					</div>
+				</div>
+
+				<h3>Key Outcomes</h3>
+				<ul>
+					<li><strong>Operational Efficiency</strong>: Support agents focus on complex, high-value interactions</li>
+					<li><strong>Cost Reduction</strong>: Automated handling of repetitive inquiries reduces staffing needs</li>
+					<li><strong>Improved CSAT</strong>: Instant, accurate responses improve customer satisfaction scores</li>
+					<li><strong>Scalability</strong>: Handles traffic spikes without degradation in service quality</li>
+					<li><strong>Knowledge Consistency</strong>: All customers receive accurate, up-to-date information</li>
+				</ul>
+
+				<h2>Technical Challenges & Solutions</h2>
+				<ul>
+					<li><strong>Challenge</strong>: Hallucination in LLM responses
+						<br><strong>Solution</strong>: RAG architecture grounds responses in verified company knowledge
+					</li>
+					<li><strong>Challenge</strong>: Response latency under load
+						<br><strong>Solution</strong>: Caching layer for common queries and optimized vector search
+					</li>
+					<li><strong>Challenge</strong>: Ambiguous customer queries
+						<br><strong>Solution</strong>: Intent classification and clarification prompts before retrieval
+					</li>
+					<li><strong>Challenge</strong>: Knowledge base updates
+						<br><strong>Solution</strong>: Automated embedding refresh pipeline on content changes
+					</li>
+				</ul>
+
+				<h2>Key Learnings</h2>
+				<ul>
+					<li><strong>RAG is Essential</strong>: Retrieval-based approaches dramatically improved accuracy vs pure LLM generation</li>
+					<li><strong>FastAPI Performance</strong>: Async architecture handled 10x more concurrent requests than synchronous alternatives</li>
+					<li><strong>Vector DB Selection</strong>: Pinecone's managed service reduced operational overhead significantly</li>
+					<li><strong>Prompt Engineering</strong>: Well-crafted system prompts improved response quality by 30%</li>
+					<li><strong>Human Handoff</strong>: Knowing when to escalate to humans is as important as automation</li>
+				</ul>
+
+				<h2>Future Enhancements</h2>
+				<ul>
+					<li>Multi-modal support (voice, video inquiries)</li>
+					<li>Sentiment analysis for proactive escalation</li>
+					<li>Personalized responses based on customer history</li>
+					<li>Advanced analytics dashboard for support teams</li>
+					<li>Integration with CRM systems for unified customer view</li>
+				</ul>
+
+				<div class="project-notice">
+					<h2>Code Availability</h2>
+					<p>
+						This is proprietary client work. The codebase contains client-specific 
+						integrations and business logic that cannot be shared publicly. 
+						Implementation details and technical approach outlined above.
+					</p>
+				</div>
+
+				<div class="project-meta">
+					<p><strong>Timeline</strong>: 2024</p>
+					<p><strong>Role</strong>: Developer</p>
+					<p><strong>Type</strong>: Enterprise Production System</p>
+					<p><strong>Status</strong>: Deployed & Active</p>
+				</div>
+			</article>
+		</main>
+		<Footer />
+		<ColorScript />
+	</body>
+</html>
+
+<style>
+	.subtitle {
+		font-size: 1.2rem;
+		color: var(--gray);
+		margin-top: -1rem;
+		margin-bottom: 2rem;
+	}
+
+	.architecture {
+		background: var(--code-bg, #f5f5f5);
+		padding: 1.5rem;
+		border-radius: 8px;
+		overflow-x: auto;
+		margin: 1.5rem 0;
+	}
+
+	.architecture pre {
+		margin: 0;
+		font-size: 0.9rem;
+		line-height: 1.4;
+	}
+
+	.tech-stack {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 0.5rem;
+		margin: 1.5rem 0;
+	}
+
+	.tech-tag {
+		background: var(--code-bg, #f5f5f5);
+		padding: 0.4rem 0.8rem;
+		border-radius: 4px;
+		font-size: 0.9rem;
+		font-family: monospace;
+	}
+
+	.impact-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+		gap: 1.5rem;
+		margin: 2rem 0;
+	}
+
+	.impact-card {
+		background: var(--code-bg, #f5f5f5);
+		padding: 1.5rem;
+		border-radius: 8px;
+		text-align: center;
+	}
+
+	.impact-card h3 {
+		font-size: 2.5rem;
+		margin: 0;
+		color: var(--link-col);
+	}
+
+	.impact-card p {
+		margin: 0.5rem 0 0 0;
+		color: var(--gray);
+	}
+
+	.project-meta {
+		margin-top: 3rem;
+	.project-notice {
+		margin-top: 2rem;
+		padding: 1.5rem;
+		background: var(--code-bg, #f5f5f5);
+		border-left: 4px solid var(--link-col);
+		border-radius: 4px;
+	}
+
+	.project-notice h2 {
+		margin-top: 0;
+		margin-bottom: 0.75rem;
+		font-size: 1.2rem;
+	}
+
+	.project-notice p {
+		margin: 0;
+		color: var(--gray);
+		line-height: 1.6;
+	}
+
+		padding-top: 2rem;
+
+		.project-notice {
+			background: #1a1a1a;
+		}
+		border-top: 1px solid var(--border-color, #ddd);
+		color: var(--gray);
+	}
+
+	.project-meta p {
+		margin: 0.5rem 0;
+	}
+
+	@media (prefers-color-scheme: dark) {
+		.architecture {
+			background: #1a1a1a;
+		}
+		
+		.tech-tag {
+			background: #1a1a1a;
+		}
+		
+		.impact-card {
+			background: #1a1a1a;
+		}
+	}
+</style>

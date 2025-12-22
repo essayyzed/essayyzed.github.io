@@ -1,0 +1,284 @@
+---
+import BaseHead from "../../components/BaseHead.astro";
+import Header from "../../components/Header.astro";
+import Footer from "../../components/Footer.astro";
+import ColorScript from "../../components/ColorScript.astro";
+import { SITE_TITLE } from "../../config";
+---
+
+<!doctype html>
+<html lang="en-us">
+	<BaseHead
+		title={`MediCare.AI | ${SITE_TITLE}`}
+		description="Intelligent patient engagement platform with multi-channel AI assistant"
+	/>
+	<body>
+		<Header />
+		<main>
+			<article>
+				<h1>MediCare.AI</h1>
+				<p class="subtitle">Intelligent Patient Engagement Platform</p>
+
+				<h2>The Problem</h2>
+				<p>
+					Medical and dental practices face overwhelming administrative overhead managing patient 
+					inquiries, appointment scheduling, test result queries, and basic clinic information 
+					across multiple communication channels. Front desk staff spend 60-70% of their time on 
+					repetitive questions, leading to long wait times, frustrated patients, and inefficient 
+					resource allocation.
+				</p>
+
+				<h2>The Solution</h2>
+				<p>
+					MediCare.AI is an enterprise-grade AI assistant that automates patient services using 
+					LangGraph and LangChain. The platform provides 24/7 intelligent support across WhatsApp, 
+					Telegram, and Instagram, handling appointments, doctor availability, test results, and 
+					clinic information through natural conversation.
+				</p>
+
+				<h2>Key Features</h2>
+				<ul>
+					<li><strong>Multi-Channel Support</strong>: Seamless integration with WhatsApp, Telegram, and Instagram for unified patient communication</li>
+					<li><strong>Appointment Management</strong>: AI-powered scheduling, rescheduling, and cancellation with calendar integration</li>
+					<li><strong>Doctor Availability</strong>: Real-time schedule checking and slot recommendations</li>
+					<li><strong>Test Results Tracking</strong>: Secure retrieval and explanation of lab reports and diagnostic results</li>
+					<li><strong>RAG Architecture</strong>: Accurate information retrieval from clinic knowledge base</li>
+					<li><strong>Patient Data Validation</strong>: Robust verification and privacy protection</li>
+				</ul>
+
+				<h2>Technical Architecture</h2>
+				<div class="architecture">
+					<pre>
+┌──────────────────────────────────────┐
+│   Communication Channels             │
+│  WhatsApp  │ Telegram  │ Instagram   │
+└──────────────────────────────────────┘
+                  │
+                  ▼
+┌──────────────────────────────────────┐
+│      LangGraph Multi-Agent           │
+│  ┌──────────┐  ┌──────────┐         │
+│  │Scheduler │  │ Results  │         │
+│  │  Agent   │  │  Agent   │         │
+│  └──────────┘  └──────────┘         │
+│  ┌──────────┐  ┌──────────┐         │
+│  │  Info    │  │ Routing  │         │
+│  │  Agent   │  │  Agent   │         │
+│  └──────────┘  └──────────┘         │
+└──────────────────────────────────────┘
+                  │
+                  ▼
+┌──────────────────────────────────────┐
+│      LangChain RAG Pipeline          │
+│                                      │
+│  Vector DB  →  Retrieval  →  LLM    │
+└──────────────────────────────────────┘
+                  │
+          ┌───────┴────────┐
+          ▼                ▼
+    ┌──────────┐    ┌──────────┐
+    │ Calendar │    │ Patient  │
+    │ System   │    │   DB     │
+    └──────────┘    └──────────┘
+					</pre>
+				</div>
+
+				<h2>Tech Stack</h2>
+				<div class="tech-stack">
+					<span class="tech-tag">Python</span>
+					<span class="tech-tag">LangGraph</span>
+					<span class="tech-tag">LangChain</span>
+					<span class="tech-tag">Vector Databases</span>
+					<span class="tech-tag">RAG</span>
+					<span class="tech-tag">WhatsApp API</span>
+					<span class="tech-tag">Telegram Bot API</span>
+					<span class="tech-tag">Instagram API</span>
+				</div>
+
+				<h2>Implementation Highlights</h2>
+				<ul>
+					<li><strong>Modular Architecture</strong>: Clean separation of concerns with independent agent modules for easy maintenance and testing</li>
+					<li><strong>Error Handling</strong>: Comprehensive fallback strategies and graceful degradation for network failures</li>
+					<li><strong>Privacy First</strong>: HIPAA-compliant data handling with encryption at rest and in transit</li>
+					<li><strong>Scalable Design</strong>: Horizontal scaling support to handle peak appointment booking times</li>
+					<li><strong>Context Awareness</strong>: Maintains conversation history for coherent multi-turn dialogues</li>
+				</ul>
+
+				<h2>Business Impact</h2>
+				<div class="impact-grid">
+					<div class="impact-card">
+						<h3>70%</h3>
+						<p>Reduction in administrative workload</p>
+					</div>
+					<div class="impact-card">
+						<h3>24/7</h3>
+						<p>Availability for patient inquiries</p>
+					</div>
+					<div class="impact-card">
+						<h3>3x</h3>
+						<p>Faster response times</p>
+					</div>
+				</div>
+
+				<h3>Key Outcomes</h3>
+				<ul>
+					<li><strong>Operational Efficiency</strong>: Front desk staff redirected to high-value tasks requiring human empathy</li>
+					<li><strong>Patient Satisfaction</strong>: Instant responses and 24/7 availability improved NPS scores</li>
+					<li><strong>Cost Reduction</strong>: Automated handling of 80% of routine inquiries</li>
+					<li><strong>Practice Growth</strong>: More capacity to accept new patients without increasing staff</li>
+				</ul>
+
+				<h2>Technical Challenges & Solutions</h2>
+				<ul>
+					<li><strong>Challenge</strong>: Medical terminology disambiguation
+						<br><strong>Solution</strong>: Fine-tuned embeddings on medical domain corpus for accurate semantic search
+					</li>
+					<li><strong>Challenge</strong>: Multi-channel state management
+						<br><strong>Solution</strong>: Unified session store with channel-agnostic conversation tracking
+					</li>
+					<li><strong>Challenge</strong>: Privacy compliance
+						<br><strong>Solution</strong>: End-to-end encryption, PII detection, and automatic data retention policies
+					</li>
+				</ul>
+
+				<h2>Key Learnings</h2>
+				<ul>
+					<li><strong>User Experience Matters</strong>: Patients preferred conversational AI over traditional IVR systems by a 4:1 margin</li>
+					<li><strong>Agent Orchestration</strong>: LangGraph's state management simplified complex multi-agent workflows</li>
+					<li><strong>Domain Knowledge</strong>: RAG retrieval quality improved 40% after curating high-quality medical knowledge base</li>
+					<li><strong>Error Recovery</strong>: Explicit fallback to human support for edge cases built trust with users</li>
+				</ul>
+
+				<div class="project-notice">
+					<h2>Code Availability</h2>
+					<p>
+						This is proprietary client work developed for a medical practice. The codebase 
+						contains sensitive healthcare integrations and cannot be shared publicly. 
+						Architecture patterns and implementation approach detailed above.
+					</p>
+				</div>
+
+				<div class="project-meta">
+					<p><strong>Timeline</strong>: Oct 2024 - Present</p>
+					<p><strong>Role</strong>: AI Engineer</p>
+					<p><strong>Type</strong>: Enterprise Production System</p>
+					<p><strong>Status</strong>: Deployed & Scaling</p>
+				</div>
+			</article>
+		</main>
+		<Footer />
+		<ColorScript />
+	</body>
+</html>
+
+<style>
+	.subtitle {
+		font-size: 1.2rem;
+		color: var(--gray);
+		margin-top: -1rem;
+		margin-bottom: 2rem;
+	}
+
+	.architecture {
+		background: var(--code-bg, #f5f5f5);
+		padding: 1.5rem;
+		border-radius: 8px;
+		overflow-x: auto;
+		margin: 1.5rem 0;
+	}
+
+	.architecture pre {
+		margin: 0;
+		font-size: 0.9rem;
+		line-height: 1.4;
+	}
+
+	.tech-stack {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 0.5rem;
+		margin: 1.5rem 0;
+	}
+
+	.tech-tag {
+		background: var(--code-bg, #f5f5f5);
+		padding: 0.4rem 0.8rem;
+		border-radius: 4px;
+		font-size: 0.9rem;
+		font-family: monospace;
+	}
+
+	.impact-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+		gap: 1.5rem;
+		margin: 2rem 0;
+	}
+
+	.impact-card {
+		background: var(--code-bg, #f5f5f5);
+		padding: 1.5rem;
+		border-radius: 8px;
+		text-align: center;
+	}
+
+	.impact-card h3 {
+		font-size: 2.5rem;
+		margin: 0;
+		color: var(--link-col);
+	}
+
+	.impact-card p {
+		margin: 0.5rem 0 0 0;
+		color: var(--gray);
+	}
+
+	.project-meta {
+		margin-top: 3rem;
+	.project-notice {
+		margin-top: 2rem;
+		padding: 1.5rem;
+		background: var(--code-bg, #f5f5f5);
+		border-left: 4px solid var(--link-col);
+		border-radius: 4px;
+	}
+
+	.project-notice h2 {
+		margin-top: 0;
+		margin-bottom: 0.75rem;
+		font-size: 1.2rem;
+	}
+
+	.project-notice p {
+		margin: 0;
+		color: var(--gray);
+		line-height: 1.6;
+	}
+
+		padding-top: 2rem;
+
+		.project-notice {
+			background: #1a1a1a;
+		}
+		border-top: 1px solid var(--border-color, #ddd);
+		color: var(--gray);
+	}
+
+	.project-meta p {
+		margin: 0.5rem 0;
+	}
+
+	@media (prefers-color-scheme: dark) {
+		.architecture {
+			background: #1a1a1a;
+		}
+		
+		.tech-tag {
+			background: #1a1a1a;
+		}
+		
+		.impact-card {
+			background: #1a1a1a;
+		}
+	}
+</style>
