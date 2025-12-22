@@ -16,79 +16,33 @@ const posts = await getCollection("posts");
 	<body>
 		<Header title={SITE_TITLE} />
 		<main>
-			<section class="intro">
+			<section class="hero">
 				<h1>Syed Asad Zaman</h1>
-				<p class="tagline">Generative AI Engineer · IBM Consulting · Islamabad, Pakistan</p>
-				<p class="bio">
-					I build production AI systems using LangChain, GPT-4, and RAG architectures at IBM. 
-					Specializing in intelligent diagnostics, multi-agent systems, and enterprise GenAI platforms 
-					that reduce operational overhead and improve efficiency.
-				</p>
-				<div class="quick-stats">
-					<span>📍 Islamabad</span>
-					<span>💼 IBM (2+ years)</span>
-					<span>🤖 LangChain · RAG · LLMs</span>
-				</div>
-			</section>
-
-			<hr />
-
-			<section class="current-work">
-				<h2>What I'm Building Now</h2>
-				<p>
-					Currently at IBM, I'm working across multiple roles building production-ready GenAI systems: 
-					<strong>DB HealthWatch</strong> (database diagnostics with 60% faster diagnosis), 
-					<strong>MediCare.AI</strong> (patient engagement platform with 24/7 multi-channel support), 
-					and <strong>IBM Maximo</strong> customizations for enterprise clients. 
-					Previously built <strong>HyperDrive</strong>, an autonomous driving system using Deep RL.
+				<p class="subtitle">Generative AI Engineer at IBM Consulting</p>
+				<p class="description">
+					I build production AI systems using LangChain, RAG, and LLMs. Currently working on 
+					intelligent diagnostics and multi-agent platforms that reduce operational overhead.
 				</p>
 			</section>
 
-			<hr />
+			<section class="links-section">
+				<a href="/about" class="link-card">
+					<h2>About</h2>
+					<p>Experience, education, and what I'm working on</p>
+				</a>
+				<a href="/posts" class="link-card">
+					<h2>Writing</h2>
+					<p>Technical articles on AI, programming, and learning</p>
+				</a>
+				<a href="/projects" class="link-card">
+					<h2>Projects</h2>
+					<p>Production systems and research in GenAI and ML</p>
+				</a>
+			</section>
 
-			<h2><a href="/news">recent updates</a></h2>
-
-			<table>
-				<tbody>
-					<tr>
-						<td>Dec 2024</td>
-						<td>Published blog post: "What Programming is Really About in 2025"</td>
-					</tr>
-					<tr>
-						<td>Oct 2024</td>
-						<td>Started AI Engineer role at IBM's Generative AI Center of Excellence</td>
-					</tr>
-					<tr>
-						<td>May 2024</td>
-						<td>Promoted to Maximo Consultant at IBM</td>
-					</tr>
-				</tbody>
-			</table>
-
-			<p class="section-link"><a href="/news">→ View all news</a></p>
-
-			<hr />
-
-			<h2><a href="/posts">latest writing</a></h2>
-
-			<HomePosts allPosts={posts} />
-
-			<p class="section-link"><a href="/posts">→ View all posts</a></p>
-
-			<hr />
-
-			<section class="contact-section">
-				<h2>Get in Touch</h2>
-				<p>Interested in collaborating on GenAI projects or discussing AI implementations?</p>
-				<div class="contact-links">
-					<a href="mailto:essayyzed@gmail.com" class="contact-link">📧 Email</a>
-					<a href="https://www.linkedin.com/in/essayyzed/" target="_blank" rel="noopener" class="contact-link">💼 LinkedIn</a>
-					<a href="https://github.com/essayyzed" target="_blank" rel="noopener" class="contact-link">🔗 GitHub</a>
-					<a href="https://twitter.com/essayyzed" target="_blank" rel="noopener" class="contact-link">🐦 Twitter</a>
-				</div>
-				<p class="about-link">
-					<a href="/about">→ Read more about my experience and background</a>
-				</p>
+			<section class="latest-posts">
+				<h2>Latest Posts</h2>
+				<HomePosts allPosts={posts} />
 			</section>
 		</main>
 		<Footer />
@@ -97,54 +51,71 @@ const posts = await getCollection("posts");
 </html>
 
 <style>
-	.intro {
-		margin: 2rem 0 3rem 0;
+	.hero {
+		margin: 3rem 0 5rem 0;
+		text-align: center;
 	}
 
-	.intro h1 {
-		margin: 0 0 0.5rem 0;
+	.hero h1 {
+		margin: 0 0 0.75rem 0;
 		font-size: 2.5rem;
+		font-weight: 600;
 	}
 
-	.tagline {
+	.subtitle {
 		color: var(--gray);
+		font-size: 1.2rem;
+		margin: 0 0 2rem 0;
+	}
+
+	.description {
+		max-width: 60ch;
+		margin: 0 auto;
 		font-size: 1.1rem;
-		margin: 0 0 1rem 0;
-	}
-
-	.bio {
-		font-size: 1.05rem;
-		line-height: 1.6;
-		margin: 1.5rem 0;
-	}
-
-	.quick-stats {
-		display: flex;
-		flex-wrap: wrap;
-		gap: 1rem;
-		margin-top: 1.5rem;
-		font-size: 0.95rem;
-	}
-
-	.quick-stats span {
-		background: var(--code-bg, #f5f5f5);
-		padding: 0.5rem 1rem;
-		border-radius: 6px;
-	}
-
-	hr {
-		border: none;
-		border-top: 1px solid var(--border-color, #ddd);
-		margin: 3rem 0;
-	}
-
-	.current-work {
-		margin: 2rem 0;
-	}
-
-	.current-work p {
-		font-size: 1.05rem;
 		line-height: 1.7;
+		color: var(--gray);
+	}
+
+	.links-section {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+		gap: 1.5rem;
+		margin: 4rem 0;
+	}
+
+	.link-card {
+		padding: 2rem;
+		border: 1px solid var(--border-color, #ddd);
+		border-radius: 8px;
+		text-decoration: none;
+		color: var(--text-col);
+		transition: transform 0.2s, border-color 0.2s;
+	}
+
+	.link-card:hover {
+		transform: translateY(-2px);
+		border-color: var(--link-col);
+	}
+
+	.link-card h2 {
+		margin: 0 0 0.5rem 0;
+		font-size: 1.5rem;
+		color: var(--text-col);
+	}
+
+	.link-card p {
+		margin: 0;
+		color: var(--gray);
+		line-height: 1.5;
+	}
+
+	.latest-posts {
+		margin: 5rem 0 3rem 0;
+	}
+
+	.latest-posts h2 {
+		margin-bottom: 2rem;
+		font-size: 1.8rem;
 	}
 
 	.featured-projects {
