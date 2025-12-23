@@ -27,7 +27,7 @@ html,
 body {
 	margin: auto;
 	padding: 20px;
-	max-width: 70ch;
+	max-width: 90ch;
 	background-color: var(--white);
 	word-wrap: break-word;
 	overflow-wrap: break-word;
@@ -245,10 +245,66 @@ article :not(.article-title) {
 
 .blog-post {
 	font-size: clamp(1rem, 0.96rem + 0.22vw, 1.125rem);
+	line-height: 1.9;
 }
 
 .blog-post > * + * {
-	margin-block-start: 1em;
+	margin-block-start: 2em;
+}
+
+.blog-post p {
+	margin-bottom: 2em;
+	line-height: 1.9;
+}
+
+.blog-post ul, .blog-post ol {
+	margin: 2em 0;
+}
+
+.blog-post li {
+	margin-bottom: 1em;
+	line-height: 1.8;
+}
+
+.blog-post li > ul,
+.blog-post li > ol {
+	margin-top: 0.5em;
+}
+
+.blog-post h2, .blog-post h3, .blog-post h4 {
+	margin-top: 2.5em;
+	margin-bottom: 1em;
+	line-height: 1.4;
+}
+
+.blog-post h2 {
+	font-size: 1.8em;
+}
+
+.blog-post h3 {
+	font-size: 1.4em;
+}
+
+.blog-post h4 {
+	font-size: 1.2em;
+}
+
+.blog-post blockquote {
+	margin: 2em 0;
+	padding: 1em 1.5em;
+	border-left: 4px solid var(--gray);
+}
+
+.blog-post blockquote p {
+	margin: 0;
+}
+
+.blog-post strong {
+	font-weight: 700;
+}
+
+.blog-post hr {
+	margin: 3em 0;
 }
 
 time {
