@@ -8,160 +8,246 @@ import { SITE_TITLE } from "../config";
 
 <!doctype html>
 <html lang="en-us">
-	<BaseHead title={`About · ${SITE_TITLE}`} description="Generative AI Engineer, Technology Consultant, and Computer Science Major" />
+	<BaseHead title={`About · ${SITE_TITLE}`} description="AI/ML Consultant specializing in Generative AI and Large Language Models for Enterprise Solutions" />
 	<body>
 		<Header title={SITE_TITLE} />
 		<main>
 			<article class="about-page">
 				<header class="page-header">
 					<h1>Syed Asad Zaman</h1>
-					<p class="subtitle">Generative AI Engineer · IBM Consulting · Islamabad, Pakistan</p>
+					<p class="subtitle">AI/ML Consultant · IBM Consulting · Islamabad, Pakistan</p>
 				</header>
 
 				<section class="intro-block">
+					<h2 class="hook-title">The Problem That Changed Everything</h2>
 					<p>
-						I design and deliver production-grade AI systems using large language models (LLMs), 
-						retrieval-augmented generation (RAG), and prompt engineering. At IBM Consulting, I've built 
-						enterprise solutions for intelligent diagnostics, customer experience management, and 
-						automated support agents across multiple industries.
+						At 3 AM, I was staring at server logs, trying to diagnose why a critical database was bleeding performance. 
+						Hours of manual analysis, digging through AWR reports, correlating metrics across systems. I thought: 
+						"There has to be a better way."
+					</p>
+					<p>
+						That frustration led me to build DB HealthWatch—a GenAI assistant that now diagnoses database issues 
+						in minutes instead of hours. It's the kind of problem-solving that excites me: taking painful, manual 
+						processes and transforming them with intelligent automation.
+					</p>
+					<p>
+						I'm a Computer Scientist and AI Engineer who turns complex enterprise problems into elegant AI solutions. 
+						Over the past three years at IBM Consulting, I've built production systems that process thousands of daily 
+						requests across healthcare, telecommunications, and enterprise infrastructure—proving that the real value 
+						of AI isn't in the hype, it's in solving actual business problems.
 					</p>
 				</section>
 
 				<section class="section-block">
-					<h2>What I'm Building Now</h2>
-					<p class="section-intro">Currently at IBM (2 years 10 months), working across multiple roles:</p>
+					<h2>What I Build</h2>
+					<p class="philosophy">
+						I'm obsessed with taking painful manual processes and automating them with AI. Not because it's trendy, 
+						but because I've been the person staying up at 3 AM manually diagnosing issues that should've been 
+						automated years ago.
+					</p>
+					<p class="philosophy">
+						The best AI solutions are boring. They don't sound like sci-fi. They just quietly save people hours 
+						of tedious work every single day.
+					</p>
+					<p class="philosophy">
+						Here's what that philosophy looks like in practice:
+					</p>
 
-					<div class="role-card">
-						<div class="role-header">
-							<h3>Maximo Consultant</h3>
-							<span class="timeline">May 2024 - Present</span>
-						</div>
-						<p>Leading IBM Maximo implementations with focus on:</p>
-						<ul>
-							<li><strong>Application Designer</strong>: Customizing Maximo applications, creating intuitive interfaces</li>
-							<li><strong>Database Configuration</strong>: Managing domains for efficient data organization</li>
-							<li><strong>Automation Scripting</strong>: Streamlining processes and extending functionality</li>
-							<li><strong>Java Customization</strong>: Building tailored solutions and enhancing core features</li>
-						</ul>
-					</div>
-
-					<div class="role-card">
-						<div class="role-header">
-							<h3>AI Engineer</h3>
-							<span class="timeline">Oct 2024 - Present</span>
-						</div>
-						<p>Building production-ready GenAI platforms:</p>
-						
-						<div class="project-highlight">
-							<h4>DB HealthWatch</h4>
-							<p>GenAI-powered assistant for intelligent database diagnostics using LangChain, GPT-4, FAISS, and RAG.</p>
-							<ul>
-								<li>Reduced average diagnosis time by <strong>60%</strong></li>
-								<li>Improved incident response efficiency by <strong>35%</strong></li>
-								<li>Increased diagnostic coverage by <strong>40%</strong></li>
-							</ul>
-							<p class="tech-stack">Python · LangChain · GPT-4 · FAISS · RAG</p>
-						</div>
-
-						<div class="project-highlight">
-							<h4>MediCare.AI</h4>
-							<p>Intelligent patient engagement platform with multi-channel AI assistant.</p>
-							<ul>
-								<li>24/7 automated appointment management and clinic information</li>
-								<li>Multi-channel support (WhatsApp, Telegram, Instagram)</li>
-								<li>RAG-powered accurate information retrieval</li>
-							</ul>
-							<p class="tech-stack">Python · LangGraph · LangChain · Vector Databases</p>
-						</div>
-					</div>
-
-					<div class="role-card">
-						<div class="role-header">
-							<h3>Package Consultant</h3>
-							<span class="timeline">Sep 2023 - May 2024</span>
-						</div>
+					<div class="project-highlight">
+						<h3>DB HealthWatch</h3>
 						<p>
-							Level 2 AMS consultant supporting Incident Management and Service delivery of Vodafone's 
-							CVM ecosystem (IBM Data Stage, Unica CVM Suite, Oracle DB, Middleware). Managed major 
-							upgrades and handled incidents, deployments, and hotfixes.
+							GenAI-powered assistant for intelligent database diagnostics. Remember that 3 AM problem? 
+							Here's what I built to solve it.
 						</p>
+						<ul>
+							<li>Natural language interface: "Why is query performance degraded?" → automated AWR analysis</li>
+							<li>Proactive alerting system with severity classification (Good/Warning/Critical)</li>
+							<li><strong>60% reduction</strong> in average diagnosis time (5 hours → 2 hours)</li>
+							<li><strong>35% faster</strong> incident response across 50+ production databases</li>
+						</ul>
+						<p class="tech-stack">Python · LangChain · GPT-4 · FAISS · RAG</p>
+						<p class="impact">The Impact: DBAs can now focus on optimization instead of diagnosis</p>
 					</div>
+
+					<div class="project-highlight">
+						<h3>XM Support</h3>
+						<p>
+							24/7 customer experience automation—built for a client drowning in repetitive support tickets.
+						</p>
+						<ul>
+							<li>Automated responses to 120+ common queries</li>
+							<li><strong>40% ticket reduction</strong> (from 200 to 120 per week)</li>
+							<li>Sub-2-second response times with Pinecone vector search</li>
+							<li>Customer satisfaction jumped from 3.2 to 4.5 stars</li>
+						</ul>
+						<p class="tech-stack">Python · FastAPI · LangChain · OpenAI GPT-4 · Pinecone · Streamlit</p>
+						<p class="impact">The Learning: Good prompt engineering beats complex architectures for most use cases</p>
+					</div>
+
+					<div class="project-highlight">
+						<h3>MediCare.AI</h3>
+						<p>
+							Healthcare has terrible UX. We fixed appointment management with conversational AI.
+						</p>
+						<ul>
+							<li>Patients book appointments, check results, find doctors—all through conversational AI</li>
+							<li><strong>60% reduction</strong> in clinic admin workload (15 hours/week → 6 hours/week)</li>
+							<li>Handles 200+ patient interactions daily with 94% accuracy</li>
+							<li>Multi-agent orchestration using LangGraph for complex workflows</li>
+						</ul>
+						<p class="tech-stack">Python · LangGraph · LangChain · Vector Databases</p>
+						<p class="impact">The Challenge: Healthcare data is messy. RAG architecture saved us.</p>
+					</div>
+
+					<p class="cta">
+						→ Want to see the code? Check out my <a href="/projects">projects page</a> or 
+						<a href="https://github.com/essayyzed" target="_blank" rel="noopener">GitHub</a>
+					</p>
 				</section>
 
 				<section class="section-block">
-					<h2>Previous Experience</h2>
-
-					<div class="experience-item">
-						<div class="exp-header">
-							<h3>Giggso</h3>
-							<span class="timeline">Aug 2022 - Nov 2022 · Remote</span>
+					<h2>How I Got Here</h2>
+					
+					<div class="journey-item">
+						<div class="journey-header">
+							<h3>IBM Consulting</h3>
+							<span class="timeline">Feb 2023 - Present · 2 years 10 months</span>
 						</div>
-						<p class="role-title">Trainee Machine Learning Engineer</p>
 						<p>
-							Led the Data Observability module for ML pipelines using Soda Core, Airflow, and 
-							Great Expectations. Integrated observability APIs and improved ML debugging capabilities 
-							for production systems.
+							Currently wearing multiple hats: AI Engineer building GenAI platforms, Maximo Consultant implementing 
+							enterprise asset management, and former Package Consultant supporting Vodafone's CVM ecosystem. 
+							Led projects across database diagnostics, customer experience automation, and healthcare workflows.
+						</p>
+						<p class="lesson">
+							<strong>What I Learned:</strong> Production systems teach you things no tutorial ever will. The gap 
+							between "it works on my machine" and "it scales to 10K users" is where real engineering happens.
 						</p>
 					</div>
 
-					<div class="experience-item">
-						<div class="exp-header">
+					<div class="journey-item">
+						<div class="journey-header">
 							<h3>COLAB @ FAST NUCES</h3>
 							<span class="timeline">Jun 2021 - Jul 2022 · Peshawar</span>
 						</div>
-						<p class="role-title">Research Group Lead</p>
 						<p>
-							Led research team of 30+ students under Dr. Mohammad Nauman. Managed hiring, training, 
-							and roadmap development. Contributed to funded research on Differential Privacy for 
-							sensitive data protection.
+							Led a 30-person research team under Dr. Mohammad Nauman. Managed hiring, training, and roadmap development. 
+							This wasn't just research—it was where I learned to present, teach, and lead. Weekly presentations to 100+ 
+							students forced me to get good at explaining complex ideas simply.
+						</p>
+						<p class="lesson">
+							<strong>What I Learned:</strong> Communication matters as much as code. The best technical solution 
+							is worthless if you can't convince anyone to use it. <a href="/posts/how-colab-transformed-my-journey">Read the full story →</a>
+						</p>
+					</div>
+
+					<div class="journey-item">
+						<div class="journey-header">
+							<h3>FAST NUCES</h3>
+							<span class="timeline">2018 - 2022 · BS Computer Science</span>
+						</div>
+						<p>
+							Final year project: <strong>HyperDrive</strong>—autonomous navigation using Deep Reinforcement Learning in CARLA. 
+							Used DQN, DDQN, and D* Search. It crashed into virtual walls a lot, but I learned how to debug RL agents.
+						</p>
+						<p>
+							Research: Attribute Division using Three Way Decisions for Differential Privacy (ORIC funded). 
+							My introduction to the gap between academic ML and production reality.
 						</p>
 					</div>
 				</section>
 
 				<section class="section-block">
-					<h2>Education & Research</h2>
-
-					<div class="education-item">
-						<h3>Bachelor's in Computer Science</h3>
-						<p class="institution">National University of Computer and Emerging Sciences (FAST NUCES) · 2018 - 2022</p>
-					</div>
-
-					<div class="research-item">
-						<h4>Final Year Project</h4>
-						<p class="project-title"><strong>HyperDrive: Autonomous Self-Driving Cars using Deep Reinforcement Learning</strong></p>
+					<h2>What I Believe</h2>
+					
+					<div class="belief-item">
+						<h3>On RAG vs Fine-Tuning</h3>
 						<p>
-							Goal-oriented autonomous navigation in simulated urban settings using DQN, DDQN, 
-							and D* Search for route planning in dynamic environments.
+							For 90% of enterprise use cases, RAG wins. It's cheaper, faster to iterate, and doesn't require 
+							retraining when your data changes. Fine-tuning is powerful, but most companies don't need it.
 						</p>
-						<p class="tech-stack">CARLA · TensorFlow · OpenCV · Gym</p>
 					</div>
 
-					<div class="research-item">
-						<h4>Research Project</h4>
-						<p class="project-title"><strong>Attribute Division using Three Way Decisions for Differential Privacy</strong></p>
+					<div class="belief-item">
+						<h3>On AI Hype</h3>
 						<p>
-							Funded project under ORIC focusing on dividing attributes of sensitive data 
-							using Differential Privacy techniques.
+							The best AI solutions are boring. They automate tedious tasks, reduce manual work, and save time. 
+							If your AI project sounds like sci-fi, it's probably not solving a real problem.
+						</p>
+					</div>
+
+					<div class="belief-item">
+						<h3>On Production Systems</h3>
+						<p>
+							A working system that solves 80% of the problem is worth more than a perfect system that never ships. 
+							Ship fast, iterate, learn from users. Production teaches you humility.
+						</p>
+					</div>
+
+					<div class="belief-item">
+						<h3>On Learning</h3>
+						<p>
+							I learned more debugging production issues at 2 AM than I did in 4 years of university. Theory matters, 
+							but there's no substitute for building things that break and figuring out why.
 						</p>
 					</div>
 				</section>
 
 				<section class="section-block">
-					<h2>Life Outside Code</h2>
-					<p>
-						I enjoy exploring new technologies and contributing to open-source projects. Passionate 
-						about writing technical content on AI and machine learning, regularly sharing insights 
-						through my blog. I believe in continuous learning and staying updated with the latest 
-						developments in artificial intelligence.
-					</p>
-					<p>
-						Interests: Technical writing, open-source contributions, reading, photography
-					</p>
+					<h2>What I Know</h2>
+					
+					<div class="skills-compact">
+						<div class="skill-group">
+							<strong>Building Production LLM Systems:</strong> 
+							3 systems in production serving 10K+ queries daily · RAG architectures (FAISS, Pinecone) · 
+							LangChain/LangGraph · Prompt Engineering
+						</div>
+
+						<div class="skill-group">
+							<strong>Core Stack:</strong> 
+							Python (production code for 3+ years) · FastAPI · Streamlit · SQL · JavaScript · Java
+						</div>
+
+						<div class="skill-group">
+							<strong>Databases:</strong> 
+							Oracle · PostgreSQL · MongoDB · Pinecone · FAISS · Supabase
+						</div>
+
+						<div class="skill-group">
+							<strong>AI Tools:</strong> 
+							OpenAI GPT models · IBM watsonx.ai · TensorFlow · LangChain · LangGraph
+						</div>
+
+						<div class="skill-group">
+							<strong>Industries:</strong> 
+							Telecommunications (Vodafone CVM) · Healthcare (MediCare.AI) · Enterprise IT (DB diagnostics) · 
+							Energy & Utilities (Maximo implementations)
+						</div>
+
+						<div class="skill-group">
+							<strong>Certifications That Matter:</strong> 
+							IBM watsonx.ai Technical Essentials · Enterprise Design Thinking Practitioner · IBM Agile Explorer · 
+							Power Skills (Communication, Presentation, Collaboration)
+						</div>
+
+						<div class="skill-group">
+							<strong>Languages:</strong> 
+							English (Fluent) · Urdu (Fluent) · Pashto (Fluent)
+						</div>
+					</div>
 				</section>
 
 				<section class="contact-section">
-					<h2>Get in Touch</h2>
-					<p>For collaboration, opportunities, or queries about my work:</p>
+					<h2>Let's Connect</h2>
+					<p>
+						I write about AI, production systems, and lessons learned from building things that break.
+					</p>
+					<p>
+						<strong>Open to:</strong> Consulting opportunities, interesting AI projects, technical discussions, 
+						and learning from people smarter than me.
+					</p>
+					<p class="not-interested">
+						<strong>Not interested in:</strong> Blockchain AI NFT metaverse projects (unless you're joking, then I'm in).
+					</p>
 					<div class="contact-links">
 						<a href="mailto:essayyzed@gmail.com">📧 essayyzed@gmail.com</a>
 						<a href="https://www.linkedin.com/in/essayyzed/" target="_blank" rel="noopener">💼 LinkedIn</a>
@@ -206,10 +292,24 @@ import { SITE_TITLE } from "../config";
 		border-left: 4px solid var(--link-col);
 	}
 
+	.intro-block .hook-title {
+		margin-top: 0;
+		margin-bottom: 1.5rem;
+		font-size: 1.5rem;
+		color: var(--link-col);
+	}
+
 	.intro-block p {
-		margin: 0;
+		margin: 1rem 0;
 		font-size: 1.1rem;
 		line-height: 1.7;
+	}
+
+	.philosophy {
+		font-size: 1.05rem;
+		line-height: 1.8;
+		color: var(--text-col);
+		margin: 1rem 0;
 	}
 
 	.section-block {
@@ -270,21 +370,23 @@ import { SITE_TITLE } from "../config";
 	}
 
 	.project-highlight {
-		margin: 1.5rem 0;
+		margin: 2rem 0;
 		padding: 1.5rem;
 		background: var(--code-bg, #f5f5f5);
 		border-radius: 6px;
+		border: 1px solid var(--border-color, #ddd);
 	}
 
-	.project-highlight h4 {
+	.project-highlight h3 {
 		margin-top: 0;
 		margin-bottom: 0.75rem;
 		color: var(--link-col);
-		font-size: 1.2rem;
+		font-size: 1.3rem;
 	}
 
 	.project-highlight p {
 		margin: 0.75rem 0;
+		line-height: 1.7;
 	}
 
 	.project-highlight ul {
@@ -294,16 +396,51 @@ import { SITE_TITLE } from "../config";
 
 	.project-highlight li {
 		margin: 0.5rem 0;
+		line-height: 1.6;
 	}
 
-	.tech-stack {
-		color: var(--gray);
-		font-size: 0.9rem;
+	.impact {
 		font-style: italic;
+		color: var(--gray);
 		margin-top: 1rem !important;
+		journey-item {
+		margin: 2rem 0;
+		padding: 1.5rem;
+		border-left: 3px solid var(--link-col);
+		background: var(--code-bg, #f5f5f5);
+		border-radius: 4px;
 	}
 
-	.experience-item {
+	.journey-header {
+		display: flex;
+		justify-content: space-between;
+		align-items: baseline;
+		margin-bottom: 1rem;
+		flex-wrap: wrap;
+		gap: 0.5rem;
+	}
+
+	.journey-header h3 {
+		margin: 0;
+		font-size: 1.3rem;
+	}
+
+	.journey-item p {
+		margin: 1rem 0;
+		line-height: 1.7;
+	}
+
+	.lesson {
+		margin-top: 1.5rem !important;
+		padding-top: 1rem;
+		border-top: 1px solid var(--border-color, #ddd);
+		font-style: italic;
+		color: var(--gray);
+	}
+
+	.lesson strong {
+		color: var(--text-col);
+		font-style: normal
 		margin: 2rem 0;
 		padding: 1.5rem;
 		border-left: 3px solid var(--link-col);
@@ -319,48 +456,54 @@ import { SITE_TITLE } from "../config";
 		flex-wrap: wrap;
 		gap: 0.5rem;
 	}
-
-	.exp-header h3 {
-		margin: 0;
-		font-size: 1.3rem;
-	}
-
-	.role-title {
-		color: var(--gray);
-		font-weight: 500;
-		margin: 0.5rem 0 1rem 0 !important;
-	}
-
-	.education-item {
-		margin: 2rem 0;
-	}
-
-	.education-item h3 {
-		margin-bottom: 0.5rem;
-	}
-
-	.institution {
-		color: var(--gray);
-		margin: 0;
-	}
-
-	.research-item {
+belief-item {
 		margin: 2rem 0;
 		padding: 1.5rem;
-		border: 1px solid var(--border-color, #ddd);
-		border-radius: 6px;
+		border-left: 3px solid var(--link-col);
+		background: var(--code-bg, #f5f5f5);
+		border-radius: 4px;
 	}
 
-	.research-item h4 {
+	.belief-item h3 {
 		margin-top: 0;
-		color: var(--gray);
-		font-size: 0.9rem;
-		text-transform: uppercase;
-		letter-spacing: 0.05em;
+		margin-bottom: 1rem;
+		font-size: 1.2rem;
+		color: var(--link-col);
 	}
 
-	.project-title {
-		margin: 0.75rem 0 1rem 0 !important;
+	.belief-item p {
+		margin: 0;
+		line-height: 1.7;
+	}
+
+	.skills-compact {
+		margin: 2rem 0;
+	}
+
+	.skill-group {
+		margin: 1.5rem 0;
+		padding: 1rem;
+		border-left: 2px solid var(--border-color, #ddd);
+		padding-left: 1.5rem;
+		line-height: 1.8;
+	}
+
+	.skill-group strong {
+		color: var(--link-col);
+		display: block;
+		margin-bottom: 0.5rem
+		gap: 1rem;
+		flex-wrap: wrap;
+		margin: 1.5rem 0;
+	}
+
+	.industry-tag {
+		padding: 0.5rem 1rem;
+		background: var(--link-col);
+		color: white;
+		border-radius: 20px;
+		font-size: 0.9rem;
+		font-weight: 500;
 	}
 
 	.contact-section {
@@ -407,6 +550,10 @@ import { SITE_TITLE } from "../config";
 			background: #1a1a1a;
 		}
 
+		.skill-category {
+			background: #1a1a1a;
+		}
+
 		.contact-section {
 			background: #1a1a1a;
 		}
@@ -421,8 +568,11 @@ import { SITE_TITLE } from "../config";
 			font-size: 1rem;
 		}
 
-		.role-header,
-		.exp-header {
+		.intro-block .hook-title {
+			font-size: 1.3rem;
+		}
+
+		.journey-header {
 			flex-direction: column;
 			align-items: flex-start;
 		}
@@ -433,3 +583,22 @@ import { SITE_TITLE } from "../config";
 		}
 	}
 </style>
+section p {
+		line-height: 1.7;
+		margin: 1rem 0;
+	}
+
+	.not-interested {
+		font-style: italic;
+		color: var(--gray);
+	}
+
+	.contact-journey-item {
+			background: #1a1a1a;
+		}
+
+		.belief-item {
+			background: #1a1a1a;
+		}
+
+		.cta
