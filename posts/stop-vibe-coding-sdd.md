@@ -69,7 +69,7 @@ I'm going to use my project **Quilora** as an example (a production-ready RAG ap
 
 If you don't tell the AI your rules, it will bring its own.
 
-Quilora has a [project context doc][project-context] that's concrete. Example excerpts:
+Quilora has a [project_context_doc][project-context] that's concrete. Example excerpts:
 
 ```markdown
 ## Purpose
@@ -116,7 +116,7 @@ This single file prevents the classic AI failure mode:
 
 A spec-driven change starts by defining _intent_ before implementation.
 
-Quilora's [proposal doc][proposal] includes goals, non-goals, and measurable criteria. Example excerpts:
+Quilora's [proposal_doc][proposal] includes goals, non-goals, and measurable criteria. Example excerpts:
 
 ```markdown
 ## Goals
@@ -149,7 +149,7 @@ This is the part vibe coders skip and then spend two weeks arguing in PR reviews
 
 "Build X" is a vibe. A task list is executable.
 
-Quilora's [task plan][tasks] is long, but notice the shape: it's ordered, checkable, and test-aware. Example excerpts:
+Quilora's [task_plan][tasks] is long, but notice the shape: it's ordered, checkable, and test-aware. Example excerpts:
 
 ```markdown
 ## 2. Configuration Management
