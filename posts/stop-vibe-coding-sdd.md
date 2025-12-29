@@ -198,8 +198,8 @@ You wear it because you've seen what happens when you don't.
 
 Spec‑Driven Development is the seatbelt for AI‑assisted development.
 
-[project-context]: https://raw.githubusercontent.com/essayyzed/quilora-ai/main/openspec/project.md
-[proposal]: https://raw.githubusercontent.com/essayyzed/quilora-ai/main/openspec/changes/implement-rag-application/proposal.md
-[tasks]: https://raw.githubusercontent.com/essayyzed/quilora-ai/main/openspec/changes/implement-rag-application/tasks.md
+[project-context]: https://github.com/essayyzed/quilora-ai/main/openspec/project.md
+[proposal]: https://github.com/essayyzed/quilora-ai/main/openspec/changes/implement-rag-application/proposal.md
+[tasks]: https://github.com//essayyzed/quilora-ai/main/openspec/changes/implement-rag-application/tasks.md
 [openspec-site]: https://openspec.dev/
 [openspec-repo]: https://github.com/Fission-AI/OpenSpec
