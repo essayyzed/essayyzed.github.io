@@ -1,5 +1,5 @@
 ---
-title: "Stop Vibe Coding. Start Spec‑Driven Development."
+title: 'Stop Vibe Coding. Start Spec‑Driven Development.'
 slug: stop-vibe-coding-sdd
 description: "SDD makes AI-assisted dev predictable: define behavior first, then implement. Quilora shows what 'good inputs' look like in-repo. OpenSpec is one implementation."
 tags:
@@ -7,7 +7,7 @@ tags:
   - AI
   - software-engineering
   - productivity
-added: "Dec 29 2025"
+added: 'Dec 29 2025'
 ---
 
 If your "requirements" live in a Slack thread, two Jira comments, and whatever you typed into an LLM at 1:12 AM…
