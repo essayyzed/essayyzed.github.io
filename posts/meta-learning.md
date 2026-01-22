@@ -28,6 +28,8 @@ Before you dive into another 40-hour course, look at the ROI of your time:
 | **Core Logic (SQL, DS&A)**| 10+ Years          | The "Old Reliable" that actually pays the mortgage.      |
 | **Meta-Learning**         | **Lifetime**       | The only system that compounds instead of decaying.      |
 
+**Disclaimer:** These half-life estimates are generalizations based on industry trends. Actual timelines can vary significantly depending on the specific technology, company context, and individual use case. Some frameworks (like React) have longer staying power, while others fade quickly. Core logic remains stable, but even fundamental concepts can evolve. Meta-learning skills require continuous refinement as learning methods and tools change.
+
 To stay relevant, you don’t need more information. You’re already drowning in it. You need a better system for processing the garbage. You need to stop **Vibe Learning** and start **Meta-Learning.**
 
 ## 1. Kill the "Expert" Ego (The Beginner’s Tax)
@@ -67,6 +69,8 @@ Spend 20% of your time reading the theory and 80% of your time breaking the impl
 * **The Loop:** Read for 15 minutes, break the build for 2 hours.  
 The faster the feedback loop of pain, the deeper the knowledge sticks.
 
+**Note on Foundational Learning:** While JIT learning is crucial for rapid adaptation, some foundational "Just-In-Case" learning is necessary for deep expertise. Balance JIT learning with strategic foundational study to build robust knowledge.
+
 ## 5. Build a "Second Brain" (Because Your First One is Full)
 
 Your brain is a processor, not a hard drive.
@@ -75,6 +79,10 @@ If you find yourself Googling the same regex or the same "How to center a div" f
 
 **The Infrastructure:** Use Notion, Obsidian, or a folder of Markdown files.  
 Store your patterns, your "gotchas," and your "never-do-this-again" logs. When a challenge arises, you shouldn't be searching your memory; you should be searching your **System.** A senior dev is just a junior dev with a better library of snippets and a shorter path to the solution.
+
+## 6. Leverage Collaborative Learning (Beyond Individual Systems)
+
+While personal systems are crucial, don't underestimate the power of collaborative learning. Peer learning, mentorship, and community engagement accelerate your meta-learning journey. Engage with communities, seek mentors, and participate in knowledge-sharing sessions to complement your individual learning systems.
 
 ## The Bottom Line
 
