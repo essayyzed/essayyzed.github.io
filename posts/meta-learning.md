@@ -1,6 +1,6 @@
 ---
 title: "Your Tech Stack Has a Half-Life. Are You Engineering Your Own Obsolescence?"
-slug: meta-learning-half-life
+slug: meta-learning
 description: "Technical knowledge is a depreciating asset. In a world of constant change, your ability to learn is your only real competitive advantage."
 tags:
   - meta-learning
