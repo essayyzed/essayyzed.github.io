@@ -1,0 +1,141 @@
+---
+import { getCollection } from "astro:content";
+import BaseHead from "../components/BaseHead.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import Post from "../components/Post.astro";
+import ColorScript from "../components/ColorScript.astro";
+
+let posts = await getCollection("posts");
+
+// Filter posts that have the "maximo" tag
+const maximoPosts = posts
+	.filter(post => post.data.tags.some(tag => tag.toLowerCase() === "maximo"))
+	.sort(
+		(a, b) =>
+			new Date(b.data.updated || b.data.added).valueOf() -
+			new Date(a.data.updated || a.data.added).valueOf(),
+	);
+
+const pageTitle = "Maximo Series";
+const pageDescription = "A comprehensive series on IBM Maximo development, customization, and enterprise asset management.";
+---
+
+<!doctype html>
+<html lang="en-us">
+	<BaseHead title={pageTitle} description={pageDescription} />
+	<body>
+		<Header />
+		<main>
+			<content>
+				<div class="series-header">
+					<h1>Maximo Series</h1>
+					<p class="series-description">
+						A dedicated series covering IBM Maximo development, Java customizations, 
+						configuration, and enterprise asset management practices. This series is designed 
+						for developers and administrators working with Maximo 7.6+ environments.
+					</p>
+					<div class="series-stats">
+						<span class="stat">
+							<strong>{maximoPosts.length}</strong> {maximoPosts.length === 1 ? 'post' : 'posts'}
+						</span>
+					</div>
+				</div>
+
+				{maximoPosts.length > 0 ? (
+					<ul class="posts-list">
+						{
+							maximoPosts.map(
+								({
+									data: { description, slug, title, tags, added: date },
+								}) => <Post {description} {date} {slug} {title} {tags} />
+							)
+						}
+					</ul>
+				) : (
+					<p class="no-posts">No posts in this series yet. Check back soon!</p>
+				)}
+
+				<div class="series-footer">
+					<p>
+						Want to learn more about other topics? <a href="/posts">View all posts</a> 
+						or <a href="/">return to the home page</a>.
+					</p>
+				</div>
+			</content>
+		</main>
+		<Footer />
+		<ColorScript />
+	</body>
+</html>
+
+<style>
+	.series-header {
+		margin-bottom: 3rem;
+		padding-bottom: 2rem;
+		border-bottom: 2px solid var(--gray-light);
+	}
+
+	.series-header h1 {
+		margin-bottom: 1rem;
+		color: var(--accent);
+	}
+
+	.series-description {
+		font-size: 1.1rem;
+		line-height: 1.6;
+		color: var(--gray);
+		margin-bottom: 1.5rem;
+	}
+
+	.series-stats {
+		display: flex;
+		gap: 2rem;
+		margin-top: 1rem;
+	}
+
+	.stat {
+		font-size: 0.95rem;
+		color: var(--gray);
+	}
+
+	.stat strong {
+		color: var(--gray-dark);
+		font-size: 1.1rem;
+	}
+
+	.no-posts {
+		text-align: center;
+		padding: 3rem 1rem;
+		color: var(--gray);
+		font-style: italic;
+	}
+
+	.series-footer {
+		margin-top: 4rem;
+		padding-top: 2rem;
+		border-top: 1px solid var(--gray-light);
+		text-align: center;
+		color: var(--gray);
+	}
+
+	.series-footer a {
+		color: var(--accent);
+		text-decoration: none;
+	}
+
+	.series-footer a:hover {
+		text-decoration: underline;
+	}
+
+	@media (max-width: 720px) {
+		.series-description {
+			font-size: 1rem;
+		}
+
+		.series-stats {
+			flex-direction: column;
+			gap: 0.5rem;
+		}
+	}
+</style>
