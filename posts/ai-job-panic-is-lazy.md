@@ -1,8 +1,9 @@
 ---
-layout: post
 title: "The AI Job Panic is Lazy. The Skills Shift is Real."
-date: 2026-02-07
-categories: [industry, ai, career]
+description: "Debunking the AI job-loss panic and explaining why the real shift is in skill demand, not employment collapse."
+tags: ["ai", "career", "productivity", "economics", "future-of-work"]
+added: 2026-02-07
+slug: ai-job-panic-is-lazy
 ---
 
 ### The "End of Work" is a Boring Narrative
