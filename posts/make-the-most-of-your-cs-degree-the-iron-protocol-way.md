@@ -1,10 +1,11 @@
 ---
 title: "How to Actually Make the Most of Your CS Degree"
 description: "Your degree is the floor. The Iron Protocol is the ceiling. Here is how to run both in parallel and graduate as a Top 1% engineer."
-pubDate: 2026-02-24
+added: 2026-02-24
+slug: "make-the-most-of-your-cs-degree-the-iron-protocol-way"
 author: "essayyzed"
 tags: ["cs-degree", "iron-protocol", "engineering", "undergrad", "pakistan"]
-draft: false
+updated: 2026-02-24
 ---
 
 Most students treat their Computing degree like a high school diploma: show up to class, pass the exams, get the GPA, and wait for a job to appear.
