@@ -4,6 +4,7 @@ description: "Long context is changing the LLM architecture conversation. Here i
 added: 2026-03-17
 updated: 2026-03-17
 slug: "do-you-even-need-rag-anymore"
+tags: ["llms", "rag", "long-context", "ai", "architecture"]
 ---
 
 There is an annoying truth about LLMs that people keep rediscovering.
