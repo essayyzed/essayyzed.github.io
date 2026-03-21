@@ -119,7 +119,7 @@ And honestly, simplicity matters more than people admit. Especially in productio
 
 This is really the first reason long context feels so attractive in practice: it deletes infrastructure.
 
-![Retrieval stack vs no-stack stack](/public/retriveal_stack_no_stack.webp)
+![Retrieval stack vs no-stack stack](public/retriveal_stack_no_stack.webp)
 
 *Long context wins its first battle by deleting half the pipeline.*
 
