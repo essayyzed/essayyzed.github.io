@@ -85,7 +85,7 @@ Because once you can fit the docs directly into the prompt, the obvious question
 
 Before getting opinionated about tradeoffs, it helps to see the two architectures side by side.
 
-![RAG vs Long Context architecture](/public/RAG_vs_Long_context.webp)
+![RAG vs Long Context architecture](/RAG_vs_Long_context.webp)
 
 *RAG adds a retrieval pipeline. Long context removes it and pushes the work into the model.*
 
@@ -119,7 +119,7 @@ And honestly, simplicity matters more than people admit. Especially in productio
 
 This is really the first reason long context feels so attractive in practice: it deletes infrastructure.
 
-![Retrieval stack vs no-stack stack](/public/retriveal_stack_no_stack.webp)
+![Retrieval stack vs no-stack stack](/retriveal_stack_no_stack.webp)
 
 *Long context wins its first battle by deleting half the pipeline.*
 
@@ -173,7 +173,7 @@ Sometimes the answer lives in the relationship between documents.
 
 This is where retrieval starts to feel cramped: the answer may not live in a chunk, but in the relationship between documents.
 
-![The whole book problem](/public/the_whole_book_problem.png)
+![The whole book problem](/the_whole_book_problem.png)
 
 *Sometimes the answer is not in one paragraph. It lives in the gap between documents.*
 
@@ -309,7 +309,7 @@ That feels much closer to where the architecture is actually heading.
 
 If you want the shortest version of this entire post, it’s basically this:
 
-![Decision tree for RAG, Long Context, or Hybrid](/public/decision_tree.png)
+![Decision tree for RAG, Long Context, or Hybrid](/decision_tree.png)
 
 *Pick the smallest architecture that honestly fits the problem.*
 
