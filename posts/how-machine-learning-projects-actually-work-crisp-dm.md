@@ -21,7 +21,7 @@ CRISP-DM stands for **Cross-Industry Standard Process for Data Mining**. It brea
 5. Evaluation  
 6. Deployment
 
-![CRISP-DM cycle diagram](public/crisp_dm.png)
+![CRISP-DM cycle diagram](/crisp_dm.png)
 
 At first glance, that sounds linear. In practice, it isn’t. You move forward, learn something uncomfortable, go back, fix it, and try again. That loop is the real story.
 
@@ -63,7 +63,7 @@ This phase usually includes:
 - building pipelines for repeatable transformations
 - turning raw data into feature matrices like `X` and targets like `y`
 
-![Email feature extraction pipeline](public/email_feature_extraction.png)
+![Email feature extraction pipeline](/email_feature_extraction.png)
 
 That word “pipeline” matters. You do not want a one-time manual cleanup that only works in your notebook. You want a repeatable sequence of transformations that can run again when new data arrives. Good preparation makes experiments faster. Bad preparation makes every later step fragile.
 
