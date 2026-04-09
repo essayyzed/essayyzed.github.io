@@ -84,7 +84,7 @@ Instead of splitting your data into two parts, split it into three:
 - 20% → validation  
 - 20% → test  
 
-![60/20/20 Dataset Split Diagram](/public/train_val_test_split.png)
+![60/20/20 Dataset Split Diagram](/train_val_test_split.png)
 
 Now the process becomes more reliable:
 
@@ -110,7 +110,7 @@ Let's say you try four models:
 
 Based on validation performance, the neural network wins.
 
-![Model Comparison Table](/public/model_comparison_table.png)
+![Model Comparison Table](/model_comparison_table.png)
 
 Now comes the critical step: test it.
 
