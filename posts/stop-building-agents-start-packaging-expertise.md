@@ -30,7 +30,6 @@ That is the important distinction:
 
 **Capability is not the same as expertise.**
 
-![Capability vs expertise](/capability_vs_expertise.png)
 
 ## A useful example: the quarterly risk report
 
@@ -122,8 +121,6 @@ Connecting an agent to a system tells it **where** to look. It does not tell it 
 
 That is the gap skills help fill.
 
-![Skills fill the gap between access and judgment](/access_to_judgment_gap.png)
-
 You can think of the stack like this:
 
 - the model provides general reasoning
@@ -133,7 +130,6 @@ You can think of the stack like this:
 
 That last part is where much of the enterprise value lives.
 
-![The agent stack](/agent_stack_diagram.png)
 
 Not in abstract intelligence, but in repeatable ways of doing real work.
 
@@ -191,7 +187,6 @@ There is also a risk of over-structuring things too early. Some workflows benefi
 
 So the answer is not "put everything in a skill." The answer is to package the workflows that are repeated, important, and expensive to get wrong.
 
-![When to package a workflow as a skill](/when_to_package_as_skill.png)
 
 That is where the payoff is highest.
 
