@@ -1,36 +1,16 @@
 ---
 import HeaderLink from "./HeaderLink.astro";
-import { SITE_TITLE, SITE_DESCRIPTION } from "../config";
+import { SITE_TITLE } from "../config";
 ---
 
-<header>
-	<div class="header-section">
-		<div class="header-frame">
-			<a href="/" class="site-title-link">
-				<h1>{SITE_TITLE}</h1>
-			</a>
-			<h2>{SITE_DESCRIPTION}</h2>
-		</div>
-	</div>
-</header>
-<nav>
-	<HeaderLink href="/">about</HeaderLink>
-	<HeaderLink href="/posts">blog</HeaderLink>
-	<HeaderLink href="/projects">projects</HeaderLink>
-	<HeaderLink href="/news">news</HeaderLink>
+<a href="#main" class="skip-link">Skip to content</a>
+
+<nav aria-label="Main navigation">
+  <HeaderLink href="/">~/about</HeaderLink>
+  <HeaderLink href="/posts">blog</HeaderLink>
+  <HeaderLink href="/projects">projects</HeaderLink>
+  <HeaderLink href="/news">news</HeaderLink>
+  <button class="color-toggle" id="color-toggle" aria-label="Toggle dark mode" title="Toggle dark/light mode">
+    <span id="color-icon">◐</span>
+  </button>
 </nav>
-<style>
-	.site-title-link {
-		text-decoration: none;
-		color: inherit;
-		cursor: pointer;
-	}
-
-	.site-title-link:hover {
-		opacity: 0.8;
-	}
-
-	h2 {
-		margin: 0.5em 0;
-	}
-</style>

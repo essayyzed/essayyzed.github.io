@@ -3,254 +3,281 @@ import BaseHead from "../components/BaseHead.astro";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 import ColorScript from "../components/ColorScript.astro";
-import { SITE_TITLE, SITE_DESCRIPTION } from "../config";
+import { SITE_TITLE } from "../config";
+
+const projects = [
+  {
+    title: "DB HealthWatch",
+    href: "/projects/db-healthwatch",
+    github: "https://github.com/essayyzed/dbh-watch",
+    desc: "GenAI-powered assistant for intelligent database diagnostics using LangChain, GPT-4, and FAISS. Reduced diagnosis time by 60% through natural language querying and automated alerting across 50+ production databases.",
+    tags: ["LangChain", "GPT-4", "FAISS", "RAG"],
+    meta: "2024 · IBM · Production",
+    impact: "60% faster diagnosis · 35% faster incident response",
+  },
+  {
+    title: "MediCare.AI",
+    href: "/projects/medicare-ai",
+    github: "https://github.com/essayyzed/medicare-ai",
+    desc: "Intelligent patient engagement platform with multi-channel AI assistant supporting WhatsApp, Telegram, and Instagram. Built with LangGraph for appointment management and 24/7 patient support.",
+    tags: ["LangGraph", "LangChain", "Multi-Agent", "RAG"],
+    meta: "2024 · AI Engineer · Production",
+    impact: "60% admin time saved · 24/7 support automation",
+  },
+  {
+    title: "XM Support",
+    href: "/projects/xm-support",
+    github: "https://github.com/essayyzed/xm-support",
+    desc: "AI-powered customer experience management platform using FastAPI, LangChain, and Pinecone. Automated inquiry resolution with dramatic reduction in support ticket volumes.",
+    tags: ["FastAPI", "LangChain", "Pinecone", "OpenAI"],
+    meta: "2024 · Developer · Production",
+    impact: "65% fewer tickets · 92% CSAT",
+  },
+  {
+    title: "HyperDrive",
+    href: "/projects/hyperdrive",
+    github: "https://github.com/essayyzed/hyperdrive",
+    desc: "Autonomous self-driving cars in urban settings using Deep Reinforcement Learning. Implemented DQN and DDQN with D* path planning in CARLA simulator for goal-oriented navigation.",
+    tags: ["Deep RL", "TensorFlow", "CARLA", "DQN"],
+    meta: "2021–2022 · FAST NUCES · Final Year Project",
+    impact: "Goal-oriented navigation in complex urban environments",
+  },
+];
+
+const additional = [
+  {
+    title: "Data Observability Platform",
+    desc: "ML pipeline monitoring using Soda Core, Airflow, and Great Expectations at Giggso.",
+    date: "2022",
+  },
+  {
+    title: "Differential Privacy Research",
+    desc: "Attribute division using Three Way Decisions for sensitive data protection (ORIC funded).",
+    date: "2021–2022",
+  },
+  {
+    title: "Vodafone CVM Support",
+    desc: "Level 2 AMS for IBM Data Stage, Unica Suite, and Oracle DB.",
+    date: "2023–2024",
+  },
+];
 ---
 
 <!doctype html>
 <html lang="en-us">
-	<BaseHead title={`Projects | ${SITE_TITLE}`} description="Personal and professional projects" />
-	<body>
-		<Header />
-		<main>
-			<h1>Projects</h1>
-			
-			<p>A showcase of my work in GenAI, machine learning, and autonomous systems.</p>
+  <BaseHead
+    title={`Projects · ${SITE_TITLE}`}
+    description="Production AI systems and research — GenAI, RAG, autonomous agents, and ML."
+  />
+  <body>
+    <Header />
+    <main id="main">
+      <header class="page-header">
+        <div class="page-label">// projects</div>
+        <h1>Things I've Built</h1>
+        <p class="page-desc">
+          Production systems and research in GenAI, machine learning, and autonomous systems.
+        </p>
+      </header>
 
-			<div class="projects-grid">
-				<article class="project-card">
-					<h2><a href="/projects/db-healthwatch">DB HealthWatch</a></h2>
-					<p class="project-desc">
-						GenAI-powered assistant for intelligent database diagnostics using LangChain, 
-						GPT-4, and FAISS. Reduced diagnosis time by 60% through natural language 
-						querying and automated alerting.
-					</p>
-					<div class="tech-tags">
-						<span>LangChain</span>
-						<span>GPT-4</span>
-						<span>FAISS</span>
-						<span>RAG</span>
-					</div>
-					<p class="project-meta">2024 • IBM AI Engineer • Production</p>
-					<a href="https://github.com/essayyzed/dbh-watch" class="github-link" target="_blank" rel="noopener">
-						View on GitHub →
-					</a>
-				</article>
+      <div class="projects-list">
+        {projects.map((p, i) => (
+          <article class="project">
+            <div class="project-top">
+              <div class="project-index">[{String(i + 1).padStart(2, '0')}]</div>
+              <div class="project-main">
+                <h2>
+                  <a href={p.href}>{p.title}</a>
+                </h2>
+                <p class="project-meta">{p.meta}</p>
+              </div>
+            </div>
+            <p class="project-desc">{p.desc}</p>
+            <p class="project-impact">→ {p.impact}</p>
+            <div class="project-footer">
+              <div class="tech-tags">
+                {p.tags.map((t) => <span>{t}</span>)}
+              </div>
+              <a href={p.github} class="github-link" target="_blank" rel="noopener">
+                github →
+              </a>
+            </div>
+          </article>
+        ))}
+      </div>
 
-				<article class="project-card">
-					<h2><a href="/projects/medicare-ai">MediCare.AI</a></h2>
-					<p class="project-desc">
-						Intelligent patient engagement platform with multi-channel AI assistant 
-						supporting WhatsApp, Telegram, and Instagram. Built with LangGraph for 
-						appointment management and 24/7 patient support.
-					</p>
-					<div class="tech-tags">
-						<span>LangGraph</span>
-						<span>LangChain</span>
-						<span>Multi-Agent</span>
-						<span>RAG</span>
-					</div>
-					<p class="project-meta">2024 • AI Engineer • Production</p>
-				<a href="https://github.com/essayyzed/medicare-ai" class="github-link" target="_blank" rel="noopener">
-					View on GitHub →
-				</a>
-				</article>
-
-				<article class="project-card">
-					<h2><a href="/projects/xm-support">XM Support</a></h2>
-					<p class="project-desc">
-						AI-powered customer experience management platform using FastAPI, LangChain, 
-						and Pinecone. Automated inquiry resolution with 65% reduction in support 
-						ticket volumes and 92% CSAT.
-					</p>
-					<div class="tech-tags">
-						<span>FastAPI</span>
-						<span>LangChain</span>
-						<span>Pinecone</span>
-						<span>OpenAI</span>
-					</div>
-					<p class="project-meta">2024 • Developer • Production</p>
-				<a href="https://github.com/essayyzed/xm-support" class="github-link" target="_blank" rel="noopener">
-					View on GitHub →
-				</a>
-				</article>
-
-				<article class="project-card">
-					<h2><a href="/projects/hyperdrive">HyperDrive</a></h2>
-					<p class="project-desc">
-						Autonomous self-driving cars in urban settings using Deep Reinforcement 
-						Learning. Implemented DQN and DDQN with D* path planning in CARLA simulator 
-						for goal-oriented navigation.
-					</p>
-					<div class="tech-tags">
-						<span>Deep RL</span>
-						<span>TensorFlow</span>
-						<span>CARLA</span>
-						<span>DQN</span>
-					</div>
-					<p class="project-meta">2021-2022 • FAST NUCES • Final Year Project</p>
-				<a href="https://github.com/essayyzed/hyperdrive" class="github-link" target="_blank" rel="noopener">
-					View on GitHub →
-				</a>
-				</article>
-			</div>
-
-			<div class="additional-projects">
-				<h2>Additional Work</h2>
-				<ul>
-					<li>
-						<strong>Data Observability Platform</strong> - ML pipeline monitoring 
-						using Soda Core, Airflow, and Great Expectations at Giggso (2022)
-					</li>
-					<li>
-						<strong>Differential Privacy Research</strong> - Attribute division using 
-						Three Way Decisions for sensitive data protection (ORIC funded, 2021-2022)
-					</li>
-					<li>
-						<strong>Vodafone CVM Support</strong> - Level 2 AMS for IBM Data Stage, 
-						Unica Suite, and Oracle DB (IBM, 2023-2024)
-					</li>
-				</ul>
-			</div>
-		</main>
-		<Footer />
-		<ColorScript />
-	</body>
+      <section class="additional">
+        <h2>Additional Work</h2>
+        <div class="additional-list">
+          {additional.map((item) => (
+            <div class="additional-item">
+              <span class="additional-date">{item.date}</span>
+              <div>
+                <strong>{item.title}</strong>
+                <p>{item.desc}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+    </main>
+    <Footer />
+    <ColorScript />
+  </body>
 </html>
 
 <style>
-	.projects-grid {
-		display: grid;
-		gap: 2rem;
-		margin: 2rem 0;
-	}
+  .page-header { margin: 2rem 0 2.5rem; }
+  .page-label {
+    font-size: var(--text-xs);
+    color: var(--fg-subtle);
+    letter-spacing: 0.08em;
+    margin-bottom: 0.5rem;
+  }
+  .page-header h1 {
+    font-size: clamp(1.8rem, 4vw, 2.4rem);
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    margin-bottom: 0.5rem;
+  }
+  .page-desc { font-size: var(--text-sm); color: var(--fg-muted); }
 
-	.project-card {
-		border: 1px solid var(--border-color, #ddd);
-		padding: 1.5rem;
-		border-radius: 8px;
-		transition: transform 0.2s, box-shadow 0.2s;
-	}
+  /* ── Projects ── */
+  .projects-list { display: flex; flex-direction: column; margin: 1rem 0 3rem; }
 
-	.project-card:hover {
-		transform: translateY(-2px);
-		box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-	}
+  .project {
+    padding: 1.5rem 0;
+    border-bottom: 1px solid var(--border-light);
+  }
+  .project:last-child { border-bottom: none; }
 
-	.project-card h2 {
-		margin-top: 0;
-		margin-bottom: 1rem;
-	}
+  .project-top {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    margin-bottom: 0.75rem;
+  }
 
-	.project-card h2 a {
-		text-decoration: none;
-		color: var(--text-col);
-	}
+  .project-index {
+    font-size: var(--text-xs);
+    color: var(--fg-subtle);
+    letter-spacing: 0.04em;
+    padding-top: 0.25rem;
+    flex-shrink: 0;
+    min-width: 36px;
+  }
 
-	.project-card h2 a:hover {
-		color: var(--link-col);
-	}
+  .project-main { flex: 1; }
 
-	.project-desc {
-		color: var(--gray);
-		line-height: 1.6;
-		margin-bottom: 1rem;
-	}
+  .project-main h2 {
+    font-size: var(--text-lg);
+    font-weight: 700;
+    margin-bottom: 0.2rem;
+    letter-spacing: -0.02em;
+  }
+  .project-main h2 a {
+    color: var(--fg);
+    text-decoration: none;
+    transition: color var(--transition);
+  }
+  .project-main h2 a:hover { color: var(--accent); }
 
-	.tech-tags {
-		display: flex;
-		flex-wrap: wrap;
-		gap: 0.5rem;
-		margin: 1rem 0;
-	}
+  .project-meta {
+    font-size: var(--text-xs);
+    color: var(--fg-subtle);
+    letter-spacing: 0.03em;
+  }
 
-	.tech-tags span {
-		background: var(--code-bg, #f5f5f5);
-		padding: 0.3rem 0.6rem;
-		border-radius: 4px;
-		font-size: 0.85rem;
-		font-family: monospace;
-	}
+  .project-desc {
+    font-size: var(--text-sm);
+    color: var(--fg-muted);
+    line-height: 1.75;
+    margin-bottom: 0.6rem;
+    padding-left: calc(36px + 1rem);
+  }
 
-	.project-meta {
-		color: var(--gray);
-		font-size: 0.9rem;
-		margin-top: 1rem;
-		margin-bottom: 0;
-	}
+  .project-impact {
+    font-size: var(--text-xs);
+    color: var(--fg-subtle);
+    font-style: italic;
+    padding-left: calc(36px + 1rem);
+    margin-bottom: 0.75rem;
+  }
 
-	.github-link {
-		display: inline-block;
-		margin-top: 1rem;
-		padding: 0.5rem 1rem;
-		background: var(--link-col);
-		color: white;
-		text-decoration: none;
-		border-radius: 6px;
-		font-size: 0.9rem;
-		font-weight: 500;
-		transition: opacity 0.2s;
-	}
+  .project-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    padding-left: calc(36px + 1rem);
+  }
 
-	.github-link:hover {
-		opacity: 0.9;
-	}
+  .tech-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.35rem;
+  }
 
-	.proprietary-note {
-		margin-top: 1rem;
-		padding: 0.5rem 0.75rem;
-		background: var(--code-bg, #f5f5f5);
-		border-left: 3px solid var(--gray);
-		font-size: 0.85rem;
-		color: var(--gray);
-		font-style: italic;
-		border-radius: 4px;
-	}
+  .tech-tags span {
+    font-size: var(--text-xs);
+    background: var(--bg-code);
+    color: var(--fg-muted);
+    padding: 0.15rem 0.5rem;
+    border-radius: var(--radius-sm);
+    border: 1px solid var(--border-light);
+    letter-spacing: 0.02em;
+  }
 
-	.additional-projects {
-		margin-top: 3rem;
-		padding-top: 2rem;
-		border-top: 1px solid var(--border-color, #ddd);
-	}
+  .github-link {
+    font-size: var(--text-xs);
+    color: var(--fg-subtle);
+    text-decoration: none;
+    transition: color var(--transition);
+  }
+  .github-link:hover { color: var(--accent); }
 
-	.additional-projects ul {
-		list-style: none;
+  /* ── Additional ── */
+  .additional {
+    margin: 1rem 0 2rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--border);
+  }
 
-		.proprietary-note {
-			background: #1a1a1a;
-		}
-		padding: 0;
-	}
+  .additional h2 {
+    font-size: var(--text-xs);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--fg-subtle);
+    margin-bottom: 1rem;
+  }
 
-	.additional-projects li {
-		margin: 1rem 0;
-		padding-left: 1.5rem;
-		position: relative;
-	}
+  .additional-list { display: flex; flex-direction: column; }
 
-	.additional-projects li:before {
-		content: "→";
-		position: absolute;
-		left: 0;
-		color: var(--gray);
-	}
+  .additional-item {
+    display: grid;
+    grid-template-columns: 80px 1fr;
+    gap: 1rem;
+    padding: 0.75rem 0;
+    border-bottom: 1px solid var(--border-light);
+    font-size: var(--text-sm);
+  }
+  .additional-item:last-child { border-bottom: none; }
 
-	@media (prefers-color-scheme: dark) {
-		.project-card {
-			border-color: #333;
-		}
+  .additional-date {
+    font-size: var(--text-xs);
+    color: var(--fg-subtle);
+    padding-top: 0.15rem;
+    white-space: nowrap;
+  }
 
-		.project-card:hover {
-			box-shadow: 0 4px 12px rgba(255, 255, 255, 0.1);
-		}
+  .additional-item strong { color: var(--fg); font-weight: 600; display: block; margin-bottom: 0.2rem; }
+  .additional-item p { color: var(--fg-muted); line-height: 1.6; font-size: var(--text-sm); margin: 0; }
 
-		.tech-tags span {
-			background: #1a1a1a;
-		}
-	}
-
-	@media (min-width: 768px) {
-		.projects-grid {
-			grid-template-columns: repeat(2, 1fr);
-		}
-	}
+  @media (max-width: 520px) {
+    .project-desc, .project-impact, .project-footer { padding-left: 0; }
+    .project-index { display: none; }
+    .additional-item { grid-template-columns: 1fr; gap: 0.25rem; }
+  }
 </style>

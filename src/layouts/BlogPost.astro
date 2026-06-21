@@ -11,53 +11,118 @@ const posts = await getCollection("posts");
 const allTags = getTags(posts);
 
 let {
-	content: { title, description, added, updated, tags, heroImage },
+  content: { title, description, added, updated, tags, heroImage },
 } = Astro.props;
 
-added = new Date(added).toLocaleDateString(
-	"en-us",
-	{
-		year: "numeric",
-		month: "short",
-		day: "numeric",
-	}
-);
+const addedFormatted = new Date(added).toLocaleDateString("en-us", {
+  year: "numeric",
+  month: "short",
+  day: "numeric",
+});
 
-if (updated) {
-	updated = new Date(updated).toLocaleDateString(
-		"en-us",
-		{
-			year: "numeric",
-			month: "short",
-			day: "numeric",
-		}
-	);
-}
+const updatedFormatted = updated
+  ? new Date(updated).toLocaleDateString("en-us", {
+      year: "numeric",
+      month: "short",
+      day: "numeric",
+    })
+  : null;
 ---
 
 <html lang="en-us">
-	<BaseHead title={title} description={description} />
+  <BaseHead title={title} description={description} />
 
-	<body>
-		<Header />
-		<main>
-			<article>
-				{heroImage && <img width={720} height={360} src={heroImage} alt="" />}
-				<h1 class="article-title">{title}</h1>
-				{updated ?
-					<span><time>{added}</time>, last updated on <time>{updated}</time></span>
-					:
-					<span>{added && <time>{added}</time>}</span>
-				}
-				<Tags tags={tags} />
-				<hr />
-				<div class="blog-post">
-					<slot />
-				</div>
-			</article>
-		</main>
-		<Tags tags={allTags} all />
-		<Footer />
-		<ColorScript />
-	</body>
+  <body>
+    <Header />
+    <main id="main">
+      <article>
+        <header class="article-header">
+          {heroImage && (
+            <img
+              class="hero-image"
+              width={720}
+              height={360}
+              src={heroImage}
+              alt=""
+              loading="lazy"
+            />
+          )}
+          <h1 class="article-title">{title}</h1>
+          <div class="article-meta">
+            <time datetime={added}>{addedFormatted}</time>
+            {updatedFormatted && (
+              <span class="updated">· updated <time datetime={updated}>{updatedFormatted}</time></span>
+            )}
+          </div>
+          {tags && <Tags tags={tags} />}
+        </header>
+
+        <hr />
+
+        <div class="blog-post">
+          <slot />
+        </div>
+
+        <footer class="article-footer">
+          <hr />
+          <p class="back-link"><a href="/posts">← all posts</a></p>
+          <div class="all-tags">
+            <span class="tags-label">browse by topic:</span>
+            <Tags tags={allTags} all />
+          </div>
+        </footer>
+      </article>
+    </main>
+    <Footer />
+    <ColorScript />
+  </body>
 </html>
+
+<style>
+  .article-header { margin: 2rem 0 1.5rem; }
+
+  .hero-image {
+    width: 100%;
+    height: auto;
+    max-height: 400px;
+    object-fit: cover;
+    border-radius: var(--radius);
+    margin-bottom: 1.5rem;
+  }
+
+  .article-title {
+    font-size: clamp(1.6rem, 4vw, 2.4rem);
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    line-height: 1.2;
+    margin-bottom: 0.75rem;
+    color: var(--fg);
+  }
+
+  .article-meta {
+    font-size: var(--text-xs);
+    color: var(--fg-subtle);
+    margin-bottom: 0.75rem;
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+    flex-wrap: wrap;
+  }
+
+  .article-meta time { font-style: normal; color: var(--fg-subtle); }
+  .updated { color: var(--fg-subtle); }
+
+  .article-footer { margin-top: 3rem; }
+  .back-link { margin-bottom: 1.5rem; }
+  .back-link a { font-size: var(--text-sm); color: var(--fg-muted); text-decoration: none; }
+  .back-link a:hover { color: var(--accent); }
+
+  .all-tags { margin-top: 1rem; }
+  .tags-label {
+    font-size: var(--text-xs);
+    color: var(--fg-subtle);
+    letter-spacing: 0.06em;
+    display: block;
+    margin-bottom: 0.5rem;
+  }
+</style>

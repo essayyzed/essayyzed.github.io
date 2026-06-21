@@ -5,44 +5,64 @@ import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 import Post from "../components/Post.astro";
 import ColorScript from "../components/ColorScript.astro";
-
 import { SITE_TITLE, SITE_DESCRIPTION } from "../config";
 
 let posts = await getCollection("posts");
 
 posts = posts.sort(
-	(a, b) =>
-		new Date(b.data.updated || b.data.added).valueOf() -
-		new Date(a.data.updated || a.data.added).valueOf(),
+  (a, b) =>
+    new Date(b.data.updated || b.data.added).valueOf() -
+    new Date(a.data.updated || a.data.added).valueOf()
 );
 ---
 
 <!doctype html>
 <html lang="en-us">
-	<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
-	<body>
-		<Header />
-		<main>
-			<content>
-				<ul class="posts-list">
-					{
-						posts.map(
-							({
-								url,
-								data: { description, slug, title, tags, added: date },
-							}) => <Post {description} {date} {slug} {title} {tags} />
-						)
-					}
-				</ul>
-			</content>
+  <BaseHead title={`Writing · ${SITE_TITLE}`} description={SITE_DESCRIPTION} />
+  <body>
+    <Header />
+    <main id="main">
+      <header class="page-header">
+        <div class="page-label">// writing</div>
+        <h1>Blog</h1>
+        <p class="page-desc">
+          Essays on AI, production systems, programming, and lessons learned
+          the hard way. Also available via <a href="/rss.xml">RSS</a>.
+        </p>
+      </header>
 
-			<p class="center">
-				You can also <a href="https://blahg.netlify.app/rss.xml">
-					subscribe with RSS!
-				</a>
-			</p>
-		</main>
-		<Footer />
-		<ColorScript />
-	</body>
+      <ul class="posts-list">
+        {
+          posts.map(
+            ({ data: { description, slug, title, tags, added: date } }) => (
+              <Post {description} {date} {slug} {title} {tags} />
+            )
+          )
+        }
+      </ul>
+    </main>
+    <Footer />
+    <ColorScript />
+  </body>
 </html>
+
+<style>
+  .page-header { margin: 2rem 0 2rem; }
+  .page-label {
+    font-size: var(--text-xs);
+    color: var(--fg-subtle);
+    letter-spacing: 0.08em;
+    margin-bottom: 0.5rem;
+  }
+  .page-header h1 {
+    font-size: clamp(1.8rem, 4vw, 2.4rem);
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    margin-bottom: 0.5rem;
+  }
+  .page-desc {
+    font-size: var(--text-sm);
+    color: var(--fg-muted);
+    line-height: 1.7;
+  }
+</style>
