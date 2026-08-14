@@ -16,7 +16,7 @@ Why?
 
 AI.
 
-Benioff said AI coding tools had increased engineering productivity by around 30%, so Salesforce did not need to keep adding engineers the way it did before. [The company went ahead with the engineering hiring freeze.](https://www.theregister.com/2025/02/27/salesforce_wont_hire_more_engineers/)
+Benioff said AI coding tools had increased engineering productivity by around 30%, so Salesforce did not need to keep adding engineers the way it did before. [The company went ahead with the engineering hiring freeze.](https://www.theregister.com/software/2025/02/27/salesforce-wont-hire-more-engineers-in-2025-due-to-ai-tools/462789)
 
 At the time, the message felt simple:
 
